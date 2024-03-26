@@ -1,0 +1,196 @@
+//KnightCat http://ff14-kc.seesaa.net/
+var num=0;
+var tArea;
+var tName;
+var sameFlg=false;
+$(function(){
+	$('#menu li').hover(function(){
+			$(this).css('opacity', '0.7');
+		},function(){
+			$(this).css('opacity', '1');
+	});
+
+	$('#menu li').click(function(){
+		num = $('#menu li').index(this);
+		$('#mapArea').children('section').each(function(){
+			$(this).hide();
+		});
+		$('#menu li').each(function(){
+			$(this).css('border-bottom','4px solid black');
+		});
+		$(this).css('border-bottom','4px solid orange');
+		$('#mapArea').children('section').eq(num).show();
+		tName = $('#mapArea').children('section').eq(num).children().attr('id');
+	});
+	
+	$('form :checkbox').click(function(){
+		tName=$(this).parent().parent().parent().parent().attr('id');
+		tArea = $('#'+tName);
+		var listNum = $(this).attr('value');
+		var inText = $(this).parent().text();
+		var pos = $(this).attr('data-pos').split(',');
+		
+		var imgName ='モブハントがめんどくさい人用マップ/images/'+tName+'/'+listNum+'.png';
+		var sameCount=0;
+		$('#'+tName+' :checked'+'[value="'+listNum+'"]').each(function(){
+			sameCount++;
+		});
+		
+		if($(this).prop('checked')==true){
+			if(sameCount==1){
+				tArea.prepend('<img src="'+imgName+'">');
+			}
+			tArea.prepend('<span style="top:'+pos[0]+'px;left:'+pos[1]+'px;">'+inText+'</span>');
+		} else {
+			if(sameCount==0){
+				$('img[src="'+imgName+'"]').remove();
+			}
+			$('span').each(function(){
+				if($(this).text()==inText)$(this).remove();
+			});
+		}
+		console.log(sameCount);
+		sameFlg=false;
+		
+		var checkList = $('#'+tName+' :checked').length;
+		var areaNo = tName.slice(4)-1;
+		//if(areaNo>=6){
+		//	areaNo -= 6;
+		//}
+		if(checkList > 0) {
+			$('#menu li').eq(areaNo).css('background-color','darkred');
+		}else {
+			$('#menu li').eq(areaNo).css('background-color','black');
+		}
+	});
+	
+	$('input[type="reset"]').click(function(){
+		$('#'+tName+' img').each(function(){
+			$(this).remove();
+		});
+		$('#'+tName+' span').each(function(){
+			$(this).remove();
+		});
+		$('#menu li').eq(num).css('background-color','black');
+	});
+	
+	$('#allReset input').click(function(){
+		$('#mapArea :checkbox').each(function(){
+			$(this).prop('checked',false);
+		});
+		$('#mapArea section img').each(function(){
+			$(this).remove();
+		});
+		$('#mapArea section span').each(function(){
+			$(this).remove();
+		});
+		$('#menu li').each(function(){
+			$(this).css('background-color','black');
+		});
+	});
+
+////debug
+	$('#guide').click(function(e){
+		var posText=e.pageY-80-8+','+e.pageX;
+		$('#debug').text(posText);
+	});	
+////
+
+});
+
+
+
+$(function(){
+	$('#menu li').hover(function(){
+			$(this).css('opacity', '0.7');
+		},function(){
+			$(this).css('opacity', '1');
+	});
+
+	$('#menu li').click(function(){
+		num = $('#menu li').index(this);
+		$('#arrmap').children('section').each(function(){
+			$(this).hide();
+		});
+		$('#menu li').each(function(){
+			$(this).css('border-bottom','4px solid black');
+		});
+		$(this).css('border-bottom','4px solid orange');
+		$('#arrmap').children('section').eq(num).show();
+		tName = $('#arrmap').children('section').eq(num).children().attr('id');
+	});
+	
+	$('form :checkbox').click(function(){
+		tName=$(this).parent().parent().parent().parent().attr('id');
+		tArea = $('#'+tName);
+		var listNum = $(this).attr('value');
+		var inText = $(this).parent().text();
+		var pos = $(this).attr('data-pos').split(',');
+		
+		var imgName ='モブハントがめんどくさい人用マップ/images/'+tName+'/'+listNum+'.png';
+		var sameCount=0;
+		$('#'+tName+' :checked'+'[value="'+listNum+'"]').each(function(){
+			sameCount++;
+		});
+		
+		if($(this).prop('checked')==true){
+			if(sameCount==1){
+				tArea.prepend('<img src="'+imgName+'">');
+			}
+			tArea.prepend('<span style="top:'+pos[0]+'px;left:'+pos[1]+'px;">'+inText+'</span>');
+		} else {
+			if(sameCount==0){
+				$('img[src="'+imgName+'"]').remove();
+			}
+			$('span').each(function(){
+				if($(this).text()==inText)$(this).remove();
+			});
+		}
+		console.log(sameCount);
+		sameFlg=false;
+		
+		var checkList = $('#'+tName+' :checked').length;
+		var areaNo = tName.slice(4)-1;
+		//if(areaNo>=6){
+		//	areaNo -= 6;
+		//}
+		if(checkList > 0) {
+			$('#menu li').eq(areaNo).css('background-color','darkred');
+		}else {
+			$('#menu li').eq(areaNo).css('background-color','black');
+		}
+	});
+	
+	$('input[type="reset"]').click(function(){
+		$('#'+tName+' img').each(function(){
+			$(this).remove();
+		});
+		$('#'+tName+' span').each(function(){
+			$(this).remove();
+		});
+		$('#menu li').eq(num).css('background-color','black');
+	});
+	
+	$('#allReset input').click(function(){
+		$('#arrmap :checkbox').each(function(){
+			$(this).prop('checked',false);
+		});
+		$('#arrmap section img').each(function(){
+			$(this).remove();
+		});
+		$('#arrmap section span').each(function(){
+			$(this).remove();
+		});
+		$('#menu li').each(function(){
+			$(this).css('background-color','black');
+		});
+	});
+
+////debug
+	$('#guide').click(function(e){
+		var posText=e.pageY-80-8+','+e.pageX;
+		$('#debug').text(posText);
+	});	
+////
+
+});

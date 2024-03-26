@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://coffea.jp/tools/map/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>モブハンマップ</title>
+<link rel="stylesheet" type="text/css" href="./モブハントがめんどくさい人用マップ/cssreset-min.css">
+<link href="./モブハントがめんどくさい人用マップ/tool_style.css" rel="stylesheet" type="text/css">
+<link href="./モブハントがめんどくさい人用マップ/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" async="" src="./モブハントがめんどくさい人用マップ/analytics.js.ダウンロード"></script><script type="text/javascript" async="" src="./モブハントがめんどくさい人用マップ/js"></script><script src="./モブハントがめんどくさい人用マップ/jquery.min.js.ダウンロード"></script>
+<script src="./モブハントがめんどくさい人用マップ/map.js.ダウンロード"></script>
+<script async="" src="./モブハントがめんどくさい人用マップ/js(1)"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-36615903-5');
+</script>
+<script async="" src="./モブハントがめんどくさい人用マップ/f.txt"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-6174565177675925",
+          enable_page_level_ads: true
+     });
+</script>
+
+<!----------------------------------------->
+<script>
+	function foobar(id,cn) {
+	  if (!document.getElementById) return;
+	  if (!document.getElementById(id)) return;
+	  var onoff = !document.getElementById(id).checked;
+	  show_hide_items(cn, onoff);
+	}
+	function show_hide_items (cn,vsbl) {
+	  if (!document.getElementsByClassName) return;
+	  if (!document.getElementsByClassName(cn)) return;
+	  var obj = document.getElementsByClassName(cn);
+	  for (var idx = 0; idx < obj.length; idx++) {
+		if (vsbl) obj[idx].style.display = "none";
+		else obj[idx].style.display = "block";
+	  }
+	}
+	</script>
+<!----------------------------------------->
+
+</head>
+<body>
+
+	<!--[if lt IE 9]> 
+	<span class="ieInfo">IE8未対応です。ブラウザのバージョンアップをしてくださいです</span>
+	<style>#mapArea {display:none;}</style>
+	<![endif]-->
+
+	<!-- <div class="home">
+		<input type="checkbox" checked name="btn_3" id="btn_3" onclick="foobar('btn_3','Heavensward')">		<label for="btn_3">ダウニーエイビス</label>
+		<input type="checkbox" checked name="btn_4" id="btn_4" onclick="foobar('btn_4','Stormblood')">		<label for="btn_4">紅蓮</label>
+		<input type="checkbox" checked name="btn_5" id="btn_5" onclick="foobar('btn_5','Shadowbringers')">	<label for="btn_5">漆黒</label>
+		<input type="checkbox" checked name="btn_6" id="btn_6" onclick="foobar('btn_6','Endwalker')">		<label for="btn_6">暁月</label>	
+	</div> -->
+	
+	<div id="mob_hunt">
+		<table border="1">
+			<tr><!-- 01 ~ 10 -->
+				<th><input type="checkbox" name="radio" id="btn_01" onclick="foobar('btn_01','ARR_01')"><label for="btn_01">Ⅱコボルス・ラクエリウス</label></th>
+				<th><input type="checkbox" name="radio" id="btn_02" onclick="foobar('btn_02','ARR_02')"><label for="btn_02">Ⅲコホルス・ラクエリウス</label></th>
+				<th><input type="checkbox" name="radio" id="btn_03" onclick="foobar('btn_03','ARR_03')"><label for="btn_03">IVコホルス・ホプロマクス</label></th>
+				<th><input type="checkbox" name="radio" id="btn_04" onclick="foobar('btn_04','ARR_04')"><label for="btn_04">Vコホルス・エクエス</label></th>
+				<th><input type="checkbox" name="radio" id="btn_05" onclick="foobar('btn_05','ARR_05')"><label for="btn_05">アイススプライト</label></th>
+				<th><input type="checkbox" name="radio" id="btn_06" onclick="foobar('btn_06','ARR_06')"><label for="btn_06">アダマンタス</label></th>
+				<th><input type="checkbox" name="radio" id="btn_07" onclick="foobar('btn_07','ARR_07')"><label for="btn_07">アマルジャ・スナイパー</label></th>
+				<th><input type="checkbox" name="radio" id="btn_08" onclick="foobar('btn_08','ARR_08')"><label for="btn_08">ウ・ガマロ・クォリーマン</label></th>
+				<th><input type="checkbox" name="radio" id="btn_09" onclick="foobar('btn_09','ARR_09')"><label for="btn_09">ウ・ガマロ・ビーズマン</label></th>
+				<th><input type="checkbox" name="radio" id="btn_10" onclick="foobar('btn_10','ARR_10')"><label for="btn_10">ウ・ガマロ・ラウンズマン</label></th>
+			</tr>
+
+			<tr><!-- 11 ~ 20 -->
+				<th><input type="checkbox" name="radio" id="btn_11" onclick="foobar('btn_11','ARR_11')"><label for="btn_11">ウォッチウルフ</label></th>
+				<th><input type="checkbox" name="radio" id="btn_12" onclick="foobar('btn_12','ARR_12')"><label for="btn_12">オールドグロウス・トレント</label></th>
+				<th><input type="checkbox" name="radio" id="btn_13" onclick="foobar('btn_13','ARR_13')"><label for="btn_13">カロング</label></th>
+				<th><input type="checkbox" name="radio" id="btn_14" onclick="foobar('btn_14','ARR_14')"><label for="btn_14">クァール</label></th>
+				<th><input type="checkbox" name="radio" id="btn_15" onclick="foobar('btn_15','ARR_15')"><label for="btn_15">グラスラプトル</label></th>
+				<th><input type="checkbox" name="radio" id="btn_16" onclick="foobar('btn_16','ARR_16')"><label for="btn_16">クレーターゴーレム</label></th>
+				<th><input type="checkbox" name="radio" id="btn_17" onclick="foobar('btn_17','ARR_17')"><label for="btn_17">ゴールデンフリース</label></th>
+				<th><input type="checkbox" name="radio" id="btn_18" onclick="foobar('btn_18','ARR_18')"><label for="btn_18">コボルド・ラウンズマン</label></th>
+				<th><input type="checkbox" name="radio" id="btn_19" onclick="foobar('btn_19','ARR_19')"><label for="btn_19">コリブリ</label></th>
+				<th><input type="checkbox" name="radio" id="btn_20" onclick="foobar('btn_20','ARR_20')"><label for="btn_20">ザハラク・アーチャー</label></th>
+			</tr>
+			<tr><!-- 21 ~ 30 -->
+				<th><input type="checkbox" name="radio" id="btn_21" onclick="foobar('btn_21','ARR_21')"><label for="btn_21">ザハラク・ピュージャリスト</label></th>
+				<th><input type="checkbox" name="radio" id="btn_22" onclick="foobar('btn_22','ARR_22')"><label for="btn_22">サプサ・シェルフトゥース</label></th>
+				<th><input type="checkbox" name="radio" id="btn_23" onclick="foobar('btn_23','ARR_23')"><label for="btn_23">サンドウォーム</label></th>
+				<th><input type="checkbox" name="radio" id="btn_24" onclick="foobar('btn_24','ARR_24')"><label for="btn_24">シェルフスケール・サハギン</label></th>
+				<th><input type="checkbox" name="radio" id="btn_25" onclick="foobar('btn_25','ARR_25')"><label for="btn_25">シェルフスパイン・サハギン</label></th>
+				<th><input type="checkbox" name="radio" id="btn_26" onclick="foobar('btn_26','ARR_26')"><label for="btn_26">ジャイアント・ラガー</label></th>
+				<th><input type="checkbox" name="radio" id="btn_27" onclick="foobar('btn_27','ARR_27')"><label for="btn_27">ジャイアント・ロガー</label></th>
+				<th><input type="checkbox" name="radio" id="btn_28" onclick="foobar('btn_28','ARR_28')"><label for="btn_28">シルヴァン・サイ</label></th>
+				<th><input type="checkbox" name="radio" id="btn_29" onclick="foobar('btn_29','ARR_29')"><label for="btn_29">シルフランド・コンドル</label></th>
+				<th><input type="checkbox" name="radio" id="btn_30" onclick="foobar('btn_30','ARR_30')"><label for="btn_30">シンセティック・ドブラン</label></th>
+			</tr>
+			<tr><!-- 31 ~ 40 -->
+				<th><input type="checkbox" name="radio" id="btn_31" onclick="foobar('btn_31','ARR_31')"><label for="btn_31">スノウストーム・グゥーブー</label></th>
+				<th><input type="checkbox" name="radio" id="btn_32" onclick="foobar('btn_32','ARR_32')"><label for="btn_32">スモークボム</label></th>
+				<th><input type="checkbox" name="radio" id="btn_33" onclick="foobar('btn_33','ARR_33')"><label for="btn_33">ダウニーエイビス</label></th>
+				<th><input type="checkbox" name="radio" id="btn_34" onclick="foobar('btn_34','ARR_34')"><label for="btn_34">デュラハン</label></th>
+				<th><input type="checkbox" name="radio" id="btn_35" onclick="foobar('btn_35','ARR_35')"><label for="btn_35">ドラゴンフライ</label></th>
+				<th><input type="checkbox" name="radio" id="btn_36" onclick="foobar('btn_36','ARR_36')"><label for="btn_36">ナタラン・フォグコーラー</label></th>
+				<th><input type="checkbox" name="radio" id="btn_37" onclick="foobar('btn_37','ARR_37')"><label for="btn_37">バジリスク</label></th>
+				<th><input type="checkbox" name="radio" id="btn_38" onclick="foobar('btn_38','ARR_38')"><label for="btn_38">バッファロー</label></th>
+				<th><input type="checkbox" name="radio" id="btn_39" onclick="foobar('btn_39','ARR_39')"><label for="btn_39">ビアスト</label></th>
+				<th><input type="checkbox" name="radio" id="btn_40" onclick="foobar('btn_40','ARR_40')"><label for="btn_40">ヒッポセルフ</label></th>
+			</tr>
+			<tr><!-- 41 ~ 48 -->
+				<th><input type="checkbox" name="radio" id="btn_41" onclick="foobar('btn_41','ARR_41')"><label for="btn_41">ミッドランド・コンドル</label></th>
+				<th><input type="checkbox" name="radio" id="btn_42" onclick="foobar('btn_42','ARR_42')"><label for="btn_42">ミルクルート・クラスター</label></th>
+				<th><input type="checkbox" name="radio" id="btn_43" onclick="foobar('btn_43','ARR_43')"><label for="btn_43">ミルクルート・サップリング</label></th>
+				<th><input type="checkbox" name="radio" id="btn_44" onclick="foobar('btn_44','ARR_44')"><label for="btn_44">リンドヴルム</label></th>
+				<th><input type="checkbox" name="radio" id="btn_45" onclick="foobar('btn_45','ARR_45')"><label for="btn_45">ワイルドダイル</label></th>
+				<th><input type="checkbox" name="radio" id="btn_46" onclick="foobar('btn_46','ARR_46')"><label for="btn_46">ワイルドホッグ</label></th>
+				<th><input type="checkbox" name="radio" id="btn_47" onclick="foobar('btn_47','ARR_47')"><label for="btn_47">海蛇の赤き目</label></th>
+			</tr>
+
+		</table>
+	</div>
+
+	<div id="arrmap">
+		<nav><!--エリア名-->
+			<ul id="menu"><!--エリア名-->
+				<!-- <li class="Heavensward" style="border-bottom: 4px solid black; opacity: 1; ">クルザス西部高地</li> -->
+				<li class="ARR_00" id="areaName"></li>
+
+				<li class="ARR_01" id="areaName">Ⅱコボルス・ラクエリウス</li>
+				<li class="ARR_01" id="areaName">ストローパー</li>
+				<li class="ARR_01" id="areaName">アイアントータス</li>
+				<li class="ARR_01" id="areaName">ビーズマン59 ビ・ゴ</li>
+				<li class="ARR_01" id="areaName">工匠のゴゾル・イツカン</li>
+
+				<li class="ARR_02" id="areaName">Ⅲコホルス・ラクエリウス</li>
+				<li class="ARR_02" id="areaName">フォールン・ウィザード</li>
+				<li class="ARR_02" id="areaName">カラクール</li>
+				<li class="ARR_02" id="areaName">オアンネス</li>
+				<li class="ARR_02" id="areaName">ジェイデッド・ジョディ</li>
+
+				<li class="ARR_03" id="areaName">IVコホルス・ホプロマクス</li>
+				<li class="ARR_03" id="areaName">シルフィード・サイ</li>
+				<li class="ARR_03" id="areaName">サプサ・シェルフクロウ</li>
+				<li class="ARR_03" id="areaName">メツハルジャス</li>
+				<li class="ARR_03" id="areaName">カフレ</li>
+				
+				<li class="ARR_04" id="areaName">Vコホルス・エクエス</li>
+				<li class="ARR_04" id="areaName">ナタラン・ウィンドタロン</li>
+				<li class="ARR_04" id="areaName">ビッグマウス・オロボン</li>
+				<li class="ARR_04" id="areaName">クルピラ</li>
+				<li class="ARR_04" id="areaName">パッドフット</li>
+
+				<li class="ARR_05" id="areaName">アイススプライト</li>
+				<li class="ARR_05" id="areaName">ニクス</li>
+				<li class="ARR_05" id="areaName">ドレイク</li>
+				<li class="ARR_05" id="areaName">双尾のヤビ・カータポ</li>
+				<li class="ARR_05" id="areaName">カルキノス</li>
+
+				<li class="ARR_06" id="areaName">アダマンタス</li>
+				<li class="ARR_06" id="areaName">デアリング・ハリアー</li>
+				<li class="ARR_06" id="areaName">クォーツドブラン</li>
+				<li class="ARR_06" id="areaName">グウィルギ</li>
+				<li class="ARR_06" id="areaName">ジョリーグリーン</li>
+
+				<li class="ARR_07" id="areaName">	アマルジャ・スナイパー	</li>
+				<li class="ARR_07" id="areaName">	ギガース・ビク	</li>
+				<li class="ARR_07" id="areaName">	コボルド・クォーリーマン	</li>
+				<li class="ARR_07" id="areaName">	美男のブガージャ	</li>
+				<li class="ARR_07" id="areaName">	シロッコ	</li>
+
+				<li class="ARR_08" id="areaName">	ウ・ガマロ・クォリーマン	</li>
+				<li class="ARR_08" id="areaName">	ハイランド・グゥーブー	</li>
+				<li class="ARR_08" id="areaName">	ハパリット	</li>
+				<li class="ARR_08" id="areaName">	ボラプチュア・ビビアン	</li>
+				<li class="ARR_08" id="areaName">	ゾレドナイト	</li>
+				
+				<li class="ARR_09" id="areaName">	ウ・ガマロ・ビーズマン	</li>
+				<li class="ARR_09" id="areaName">	Ⅲコホルス・ホプロマクス	</li>
+				<li class="ARR_09" id="areaName">	ナタラン・ボールドウィング	</li>
+				<li class="ARR_09" id="areaName">	チュパカブラ	</li>
+				<li class="ARR_09" id="areaName">	ボムバロン	</li>
+				
+				<li class="ARR_10" id="areaName">	ウ・ガマロ・ラウンズマン	</li>
+				<li class="ARR_10" id="areaName">	イクサル・ボールドウィング	</li>
+				<li class="ARR_10" id="areaName">	マムージャ・ブリーダー	</li>
+				<li class="ARR_10" id="areaName">	覚醒のダキシオ	</li>
+				<li class="ARR_10" id="areaName">	ンブル	</li>
+				
+				<li class="ARR_11" id="areaName">	ウォッチウルフ	</li>
+				<li class="ARR_11" id="areaName">	アマルジャ・ランサー	</li>
+				<li class="ARR_11" id="areaName">	ヴェロキラプトル	</li>
+				<li class="ARR_11" id="areaName">	オセ	</li>
+				<li class="ARR_11" id="areaName">	アシパトラ	</li>
+				
+				<li class="ARR_12" id="areaName">	オールドグロウス・トレント	</li>
+				<li class="ARR_12" id="areaName">	マンティスデビル	</li>
+				<li class="ARR_12" id="areaName">	ウィル・オ・ザ・ウィスプ	</li>
+				<li class="ARR_12" id="areaName">	カプリシャス・キャシー	</li>
+				<li class="ARR_12" id="areaName">	セベク	</li>
+				
+				<li class="ARR_13" id="areaName">	カロング	</li>
+				<li class="ARR_13" id="areaName">	スニッパー	</li>
+				<li class="ARR_13" id="areaName">	イクサル・バウンドウィング	</li>
+				<li class="ARR_13" id="areaName">	ガルガメル	</li>
+				<li class="ARR_13" id="areaName">	オールドシックスアームズ	</li>
+				
+				<li class="ARR_14" id="areaName">	クァール	</li>
+				<li class="ARR_14" id="areaName">	サンドウォーム	</li>
+				<li class="ARR_14" id="areaName">	ケッド	</li>
+				<li class="ARR_14" id="areaName">	ピックマン59ベ・ゼ	</li>
+				<li class="ARR_14" id="areaName">	プリンス・オブ・ペスト	</li>
+				
+				<li class="ARR_15" id="areaName">	グラスラプトル	</li>
+				<li class="ARR_15" id="areaName">	IVコホルス・セクトール	</li>
+				<li class="ARR_15" id="areaName">	タウルス	</li>
+				<li class="ARR_15" id="areaName">	バロメッツ	</li>
+				<li class="ARR_15" id="areaName">	ジャッカネイプス	</li>
+				
+				<li class="ARR_16" id="areaName">	クレーターゴーレム	</li>
+				<li class="ARR_16" id="areaName">	スノウウルフ	</li>
+				<li class="ARR_16" id="areaName">	アマルジャ・ディヴィネーター	</li>
+				<li class="ARR_16" id="areaName">	ジュバ	</li>
+				<li class="ARR_16" id="areaName">	葉刃のヴォルキシア	</li>
+				
+				<li class="ARR_17" id="areaName">	ゴールデンフリース	</li>
+				<li class="ARR_17" id="areaName">	ウ・ガマロ・プリースト	</li>
+				<li class="ARR_17" id="areaName">	モルテッド・ジズ	</li>
+				<li class="ARR_17" id="areaName">	マンドラプリンス	</li>
+				<li class="ARR_17" id="areaName">	グルタナスガーティ	</li>
+				
+				<li class="ARR_18" id="areaName">	コボルド・ラウンズマン	</li>
+				<li class="ARR_18" id="areaName">	レッドホーン・オーガ	</li>
+				<li class="ARR_18" id="areaName">	モルボル	</li>
+				<li class="ARR_18" id="areaName">	アイエテス	</li>
+				<li class="ARR_18" id="areaName">	双尾のヤビ・カータポ	</li>
+				
+				<li class="ARR_19" id="areaName">	コリブリ	</li>
+				<li class="ARR_19" id="areaName">	ザハラク・バトルドレイク	</li>
+				<li class="ARR_19" id="areaName">	シルヴァン・スナール	</li>
+				<li class="ARR_19" id="areaName">	ロンジュール	</li>
+				<li class="ARR_19" id="areaName">	カクタージャック	</li>
+				
+				<li class="ARR_20" id="areaName">	ザハラク・アーチャー	</li>
+				<li class="ARR_20" id="areaName">	ブラッドショア・ベル	</li>
+				<li class="ARR_20" id="areaName">	シルフィード・スクリーチ	</li>
+				<li class="ARR_20" id="areaName">	プロトアーマー	</li>
+				<li class="ARR_20" id="areaName">	ドゥーム・ギガントード	</li>
+				
+				<li class="ARR_21" id="areaName">	ザハラク・ピュージャリスト	</li>
+				<li class="ARR_21" id="areaName">	フローティングアイ	</li>
+				<li class="ARR_21" id="areaName">	ディープヴォイド・ドーマウス	</li>
+				<li class="ARR_21" id="areaName">	火印のアファジ・コー	</li>
+				<li class="ARR_21" id="areaName">	ダイダロス	</li>
+				
+				<li class="ARR_22" id="areaName">	サプサ・シェルフトゥース	</li>
+				<li class="ARR_22" id="areaName">	コボルド・サイズマン	</li>
+				<li class="ARR_22" id="areaName">	テンパード・オラター	</li>
+				<li class="ARR_22" id="areaName">	ロック	</li>
+				<li class="ARR_22" id="areaName">	バブリーバーニー	</li>
+				
+				<li class="ARR_23" id="areaName">	サンドウォーム	</li>
+				<li class="ARR_23" id="areaName">	アプカル	</li>
+				<li class="ARR_23" id="areaName">	ナタラン・ウォッチウルフ	</li>
+				<li class="ARR_23" id="areaName">	破戒のギスフリッド	</li>
+				<li class="ARR_23" id="areaName">	アンダーテイカー	</li>
+				
+				<li class="ARR_24" id="areaName">	シェルフスケール・サハギン	</li>
+				<li class="ARR_24" id="areaName">	イクサル・ワイルドタロン	</li>
+				<li class="ARR_24" id="areaName">	アマルジャ・ハルバルディア	</li>
+				<li class="ARR_24" id="areaName">	バドゥ	</li>
+				<li class="ARR_24" id="areaName">	ネストコマンダー	</li>
+				
+				<li class="ARR_25" id="areaName">	シェルフスパイン・サハギン	</li>
+				<li class="ARR_25" id="areaName">	リングテイル	</li>
+				<li class="ARR_25" id="areaName">	ナタラン・ウォッチウルフ	</li>
+				<li class="ARR_25" id="areaName">	銀髪のディオネ	</li>
+				<li class="ARR_25" id="areaName">	魔導ヴァンガード試験型	</li>
+				
+				<li class="ARR_26" id="areaName">	ジャイアント・ラガー	</li>
+				<li class="ARR_26" id="areaName">	サラマンダー	</li>
+				<li class="ARR_26" id="areaName">	IIコホルス・ヴァンガード	</li>
+				<li class="ARR_26" id="areaName">	弾指のココルン	</li>
+				<li class="ARR_26" id="areaName">	火打のハプグ・ロー	</li>
+				
+				<li class="ARR_27" id="areaName">	ジャイアント・ロガー	</li>
+				<li class="ARR_27" id="areaName">	Vコホルス・ホプロマクス	</li>
+				<li class="ARR_27" id="areaName">	サプサ・シェルフスパイン	</li>
+				<li class="ARR_27" id="areaName">	ダディーロングレッグ	</li>
+				<li class="ARR_27" id="areaName">	マタガイガイ	</li>
+				
+				<li class="ARR_28" id="areaName">	シルヴァン・サイ	</li>
+				<li class="ARR_28" id="areaName">	ラマーガイアー	</li>
+				<li class="ARR_28" id="areaName">	イクサル・ウィンドタロン	</li>
+				<li class="ARR_28" id="areaName">	シームルグ	</li>
+				<li class="ARR_28" id="areaName">	アルシュ	</li>
+				
+				<li class="ARR_29" id="areaName">	シルフランド・コンドル	</li>
+				<li class="ARR_29" id="areaName">	バリトンダイル	</li>
+				<li class="ARR_29" id="areaName">	IIコホルス・シグニフェル	</li>
+				<li class="ARR_29" id="areaName">	間抜のトリップティックス	</li>
+				<li class="ARR_29" id="areaName">	メヌイス	</li>
+				
+				<li class="ARR_30" id="areaName">	シンセティック・ドブラン	</li>
+				<li class="ARR_30" id="areaName">	シーワスプ	</li>
+				<li class="ARR_30" id="areaName">	シルフィード・スナール	</li>
+				<li class="ARR_30" id="areaName">	呪言のマラド・チャー	</li>
+				<li class="ARR_30" id="areaName">	アリマスピ	</li>
+				
+				<li class="ARR_31" id="areaName">	スノウストーム・グゥーブー	</li>
+				<li class="ARR_31" id="areaName">	ウラグナイト	</li>
+				<li class="ARR_31" id="areaName">	レブナント	</li>
+				<li class="ARR_31" id="areaName">	ナンバー128	</li>
+				<li class="ARR_31" id="areaName">	刻印のエルムスイス	</li>
+				
+				<li class="ARR_32" id="areaName">	スモークボム	</li>
+				<li class="ARR_32" id="areaName">	コボルド・プリースト	</li>
+				<li class="ARR_32" id="areaName">	IIコホルス・エクエス	</li>
+				<li class="ARR_32" id="areaName">	アスピドケロン	</li>
+				<li class="ARR_32" id="areaName">	ゴッサマー	</li>
+				
+				<li class="ARR_33" id="areaName">	ダウニーエイビス	</li>
+				<li class="ARR_33" id="areaName">	アマルジャ・アーチャー	</li>
+				<li class="ARR_33" id="areaName">	グレネード	</li>
+				<li class="ARR_33" id="areaName">	グレートオーク	</li>
+				<li class="ARR_33" id="areaName">	黒煙のペグジ・チャー	</li>
+				
+				<li class="ARR_34" id="areaName">	デュラハン	</li>
+				<li class="ARR_34" id="areaName">	シルフボンネット	</li>
+				<li class="ARR_34" id="areaName">	トレンチトゥース・サハギン	</li>
+				<li class="ARR_34" id="areaName">	ウルハドシ	</li>
+				<li class="ARR_34" id="areaName">	飲んべえググルン	</li>
+				
+				<li class="ARR_35" id="areaName">	ドラゴンフライ	</li>
+				<li class="ARR_35" id="areaName">	コボルド・ビーズマン	</li>
+				<li class="ARR_35" id="areaName">	ギガントード	</li>
+				<li class="ARR_35" id="areaName">	スタグナントスプライト	</li>
+				<li class="ARR_35" id="areaName">	クリュティオス	</li>
+				
+				<li class="ARR_36" id="areaName">	ナタラン・フォグコーラー	</li>
+				<li class="ARR_36" id="areaName">	マムージャ・エスキューショナー	</li>
+				<li class="ARR_36" id="areaName">	コボルド・ピットマン	</li>
+				<li class="ARR_36" id="areaName">	パイア	</li>
+				<li class="ARR_36" id="areaName">	ポリュス	</li>
+				
+				<li class="ARR_37" id="areaName">	バジリスク	</li>
+				<li class="ARR_37" id="areaName">	トレント	</li>
+				<li class="ARR_37" id="areaName">	マッドパピー	</li>
+				<li class="ARR_37" id="areaName">	ピックマン59ベ・ゼ	</li>
+				<li class="ARR_37" id="areaName">	ル・カルコル	</li>
+				
+				<li class="ARR_38" id="areaName">	バッファロー	</li>
+				<li class="ARR_38" id="areaName">	ヴォドリガ	</li>
+				<li class="ARR_38" id="areaName">	ドリームトード	</li>
+				<li class="ARR_38" id="areaName">	ヴォジャノーイ	</li>
+				<li class="ARR_38" id="areaName">	ペイトリアーク05 ゼ・ブ	</li>
+				
+				<li class="ARR_39" id="areaName">	ビアスト	</li>
+				<li class="ARR_39" id="areaName">	ジャングルクァール	</li>
+				<li class="ARR_39" id="areaName">	スプリガン	</li>
+				<li class="ARR_39" id="areaName">	悲嘆のブリアレオス	</li>
+				<li class="ARR_39" id="areaName">	アルファ・アノール	</li>
+				
+				<li class="ARR_40" id="areaName">	ヒッポセルフ	</li>
+				<li class="ARR_40" id="areaName">	コボルド・ミッションアリー	</li>
+				<li class="ARR_40" id="areaName">	Ⅲコホルス・シグニフェル	</li>
+				<li class="ARR_40" id="areaName">	スピットファイア	</li>
+				<li class="ARR_40" id="areaName">	ラウンズマン59 ゲ・ガ	</li>
+				
+				<li class="ARR_41" id="areaName">	ミッドランド・コンドル	</li>
+				<li class="ARR_41" id="areaName">	ミラーナイト	</li>
+				<li class="ARR_41" id="areaName">	シルヴァン・スクリーチ	</li>
+				<li class="ARR_41" id="areaName">	スパイトフル	</li>
+				<li class="ARR_41" id="areaName">	金剛のネゼド・ガー	</li>
+				
+				<li class="ARR_42" id="areaName">	ミルクルート・クラスター	</li>
+				<li class="ARR_42" id="areaName">	ザハラク・サーマタージ	</li>
+				<li class="ARR_42" id="areaName">	Vコホルス・シグニフェル	</li>
+				<li class="ARR_42" id="areaName">	半熟のババルン	</li>
+				<li class="ARR_42" id="areaName">	ダウニーダンスタン	</li>
+				
+				<li class="ARR_43" id="areaName">	ミルクルート・サップリング	</li>
+				<li class="ARR_43" id="areaName">	グゥーブー	</li>
+				<li class="ARR_43" id="areaName">	レイクコブラ	</li>
+				<li class="ARR_43" id="areaName">	鮫肌のヴォル	</li>
+				<li class="ARR_43" id="areaName">	覚醒のダキシオ	</li>
+				
+				<li class="ARR_44" id="areaName">	リンドヴルム	</li>
+				<li class="ARR_44" id="areaName">	シェルフクロウ・サハギン	</li>
+				<li class="ARR_44" id="areaName">	ナタラン・スウィフトビーク	</li>
+				<li class="ARR_44" id="areaName">	ピックマン426ブ・ガ	</li>
+				<li class="ARR_44" id="areaName">	リュタン	</li>
+				
+				<li class="ARR_45" id="areaName">	ワイルドダイル	</li>
+				<li class="ARR_45" id="areaName">	ドライアド	</li>
+				<li class="ARR_45" id="areaName">	キキルン・ガルロースター	</li>
+				<li class="ARR_45" id="areaName">	クアハック	</li>
+				<li class="ARR_45" id="areaName">	風標のコゾル・ノモトル	</li>
+				
+				<li class="ARR_46" id="areaName">	ワイルドホッグ	</li>
+				<li class="ARR_46" id="areaName">	レイジング・ハリアー	</li>
+				<li class="ARR_46" id="areaName">	スノウウルフ・パッブ	</li>
+				<li class="ARR_46" id="areaName">	風狂のプルシオ	</li>
+				<li class="ARR_46" id="areaName">	セクメト	</li>
+				
+				<li class="ARR_47" id="areaName">	海蛇の赤き目	</li>
+				<li class="ARR_47" id="areaName">	IVコホルス・ヴァンガード	</li>
+				<li class="ARR_47" id="areaName">	アマルジャ・ピュージャリスト	</li>
+				<li class="ARR_47" id="areaName">	純鉄のビビレゼ	</li>
+				<li class="ARR_47" id="areaName">	水鬼のヤァル	</li>
+
+			</ul>
+		</nav>
+
+		<section><!--暁月嘆きの海-->
+			<form><!--暁月-->
+				<ul id="terepo">
+					<!-- <label>東ラノシア：ワインポート</label> -->
+				</ul>
+			</form>
+		</section>
+		   <section><!--2--></section>
+		   <section><!--3--></section>
+		   <section><!--4--></section>
+		   <section><!--5--></section>
+		   <section><!--6--></section>
+		   <section><!--7--></section>
+		   <section><!--8--></section>
+		   <section><!--9--></section>
+		   <section><!--10--></section>
+		   <section><!--11--></section>
+		   <section><!--12--></section>
+		   <section><!--13--></section>
+		   <section><!--14--></section>
+		   <section><!--15--></section>
+		   <section><!--16--></section>
+		   <section><!--17--></section>
+		   <section><!--18--></section>
+		   <section><!--19--></section>
+		   <section><!--20--></section>
+		   <section><!--21--></section>
+		   <section><!--22--></section>
+		   <section><!--23--></section>
+		   <section><!--24--></section>
+		   <section><!--25--></section>
+		   <section><!--26--></section>
+		   <section><!--27--></section>
+		   <section><!--28--></section>
+		   <section><!--29--></section>
+		   <section><!--30--></section>
+		   <section><!--31--></section>
+		   <section><!--32--></section>
+		   <section><!--33--></section>
+		   <section><!--34--></section>
+		   <section><!--35--></section>
+		   <section><!--36--></section>
+		   <section><!--37--></section>
+		   <section><!--38--></section>
+		   <section><!--39--></section>
+		   <section><!--40--></section>
+		   <section><!--41--></section>
+		   <section><!--42--></section>
+		   <section><!--43--></section>
+		   <section><!--44--></section>
+		   <section><!--45--></section>
+		   <section><!--46--></section>
+		   <section><!--47--></section>
+		   <section><!--48--></section>
+		   <section><!--49--></section>
+		   <section><!--50--></section>
+		   <section><!--51--></section>
+		   <section><!--52--></section>
+		   <section><!--53--></section>
+		   <section><!--54--></section>
+		   <section><!--55--></section>
+		   <section><!--56--></section>
+		   <section><!--57--></section>
+		   <section><!--58--></section>
+		   <section><!--59--></section>
+		   <section><!--60--></section>
+		   <section><!--61--></section>
+		   <section><!--62--></section>
+		   <section><!--63--></section>
+		   <section><!--64--></section>
+		   <section><!--65--></section>
+		   <section><!--66--></section>
+		   <section><!--67--></section>
+		   <section><!--68--></section>
+		   <section><!--69--></section>
+		   <section><!--70--></section>
+		   <section><!--71--></section>
+		   <section><!--72--></section>
+		   <section><!--73--></section>
+		   <section><!--74--></section>
+		   <section><!--75--></section>
+		   <section><!--76--></section>
+		   <section><!--77--></section>
+		   <section><!--78--></section>
+		   <section><!--79--></section>
+		   <section><!--80--></section>
+		   <section><!--81--></section>
+		   <section><!--82--></section>
+		   <section><!--83--></section>
+		   <section><!--84--></section>
+		   <section><!--85--></section>
+		   <section><!--86--></section>
+		   <section><!--87--></section>
+		   <section><!--88--></section>
+		   <section><!--89--></section>
+		   <section><!--90--></section>
+		   <section><!--91--></section>
+		   <section><!--92--></section>
+		   <section><!--93--></section>
+		   <section><!--94--></section>
+		   <section><!--95--></section>
+		   <section><!--96--></section>
+		   <section><!--97--></section>
+		   <section><!--98--></section>
+		   <section><!--99--></section>
+		   <section><!--100--></section>
+		   <section><!--101--></section>
+		   <section><!--102--></section>
+		   <section><!--103--></section>
+		   <section><!--104--></section>
+		   <section><!--105--></section>
+		   <section><!--106--></section>
+		   <section><!--107--></section>
+		   <section><!--108--></section>
+		   <section><!--109--></section>
+		   <section><!--110--></section>
+		   <section><!--111--></section>
+		   <section><!--112--></section>
+		   <section><!--113--></section>
+		   <section><!--114--></section>
+		   <section><!--115--></section>
+		   <section><!--116--></section>
+		   <section><!--117--></section>
+		   <section><!--118--></section>
+		   <section><!--119--></section>
+		   <section><!--120--></section>
+		   <section><!--121--></section>
+		   <section><!--122--></section>
+		   <section><!--123--></section>
+		   <section><!--124--></section>
+		   <section><!--125--></section>
+		   <section><!--126--></section>
+		   <section><!--127--></section>
+		   <section><!--128--></section>
+		   <section><!--129--></section>
+		   <section><!--130--></section>
+		   <section><!--131--></section>
+		   <section><!--132--></section>
+		   <section><!--133--></section>
+		   <section><!--134--></section>
+		   <section><!--135--></section>
+		   <section><!--136--></section>
+		   <section><!--137--></section>
+		   <section><!--138--></section>
+		   <section><!--139--></section>
+		   <section><!--140--></section>
+		   <section><!--141--></section>
+		   <section><!--142--></section>
+		   <section><!--143--></section>
+		   <section><!--144--></section>
+		   <section><!--145--></section>
+		   <section><!--146--></section>
+		   <section><!--147--></section>
+		   <section><!--148--></section>
+		   <section><!--149--></section>
+		   <section><!--150--></section>
+		   <section><!--151--></section>
+		   <section><!--152--></section>
+		   <section><!--153--></section>
+		   <section><!--154--></section>
+		   <section><!--155--></section>
+		   <section><!--156--></section>
+		   <section><!--157--></section>
+		   <section><!--158--></section>
+		   <section><!--159--></section>
+		   <section><!--160--></section>
+		   <section><!--161--></section>
+		   <section><!--162--></section>
+		   <section><!--163--></section>
+		   <section><!--164--></section>
+		   <section><!--165--></section>
+		   <section><!--166--></section>
+		   <section><!--167--></section>
+		   <section><!--168--></section>
+		   <section><!--169--></section>
+		   <section><!--170--></section>
+		   <section><!--171--></section>
+		   <section><!--172--></section>
+		   <section><!--173--></section>
+		   <section><!--174--></section>
+		   <section><!--175--></section>
+		   <section><!--176--></section>
+		   <section><!--177--></section>
+		   <section><!--178--></section>
+		   <section><!--179--></section>
+		   <section><!--180--></section>
+		   <section><!--181--></section>
+		   <section><!--182--></section>
+		   <section><!--183--></section>
+		   <section><!--184--></section>
+		   <section><!--185--></section>
+		   <section><!--186--></section>
+		   <section><!--187--></section>
+		   <section><!--188--></section>
+		   <section><!--189--></section>
+		   <section><!--190--></section>
+		   <section><!--191--></section>
+		   <section><!--192--></section>
+		   <section><!--193--></section>
+		   <section><!--194--></section>
+		   <section><!--195--></section>
+		   <section><!--196--></section>
+		   <section><!--197--></section>
+		   <section><!--198--></section>
+		   <section><!--199--></section>
+		   <section><!--200--></section>
+		   <section><!--201--></section>
+		   <section><!--202--></section>
+		   <section><!--203--></section>
+		   <section><!--204--></section>
+		   <section><!--205--></section>
+		   <section><!--206--></section>
+		   <section><!--207--></section>
+		   <section><!--208--></section>
+		   <section><!--209--></section>
+		   <section><!--210--></section>
+		   <section><!--211--></section>
+		   <section><!--212--></section>
+		   <section><!--213--></section>
+		   <section><!--214--></section>
+		   <section><!--215--></section>
+		   <section><!--216--></section>
+		   <section><!--217--></section>
+		   <section><!--218--></section>
+		   <section><!--219--></section>
+		   <section><!--220--></section>
+		   <section><!--221--></section>
+		   <section><!--222--></section>
+		   <section><!--223--></section>
+		   <section><!--224--></section>
+		   <section><!--225--></section>
+		   <section><!--226--></section>
+		   <section><!--227--></section>
+		   <section><!--228--></section>
+		   <section><!--229--></section>
+		   <section><!--230--></section>
+		   <section><!--231--></section>
+		   <section><!--232--></section>
+		   <section><!--233--></section>
+		   <section><!--234--></section>
+		   <section><!--235--></section>
+		   <section><!--236--></section>
+
+		
+		<!-- <div id="debug" style="position:absolute;top:900px;left:0;font-size:20px;"></div> -->
+		<!-- <img id="guide" src="モブハントがめんどくさい人用マップ/images/guide.png" style="position:absolute;top:140px;left:0;z-index:300"> -->
+		
+		<div id="allReset"><input type="button" value="すべてのエリアをリセット">
+		<span style="color:#C10003">■</span>通常マップ
+		<span style="color:#FFB600">■</span>高所
+		<span style="color:#8D00E0">■</span>洞窟内など
+		<span style="color:#00ffea">■</span>FATE
+		</div>
+		<div>
+			<p><a href="index.html">蒼天～</a></p>
+		</div>
+	</div>
+
+</body></html>
