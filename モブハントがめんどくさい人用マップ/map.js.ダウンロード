@@ -54,9 +54,6 @@ $(function(){
 		
 		var checkList = $('#'+tName+' :checked').length;
 		var areaNo = tName.slice(4)-1;
-		//if(areaNo>=6){
-		//	areaNo -= 6;
-		//}
 		if(checkList > 0) {
 			$('#menu li').eq(areaNo).css('background-color','darkred');
 		}else {
@@ -151,9 +148,6 @@ $(function(){
 		
 		var checkList = $('#'+tName+' :checked').length;
 		var areaNo = tName.slice(4)-1;
-		//if(areaNo>=6){
-		//	areaNo -= 6;
-		//}
 		if(checkList > 0) {
 			$('#menu li').eq(areaNo).css('background-color','darkred');
 		}else {
@@ -192,5 +186,6 @@ $(function(){
 		$('#debug').text(posText);
 	});	
 ////
+
 
 });

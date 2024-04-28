@@ -15,7 +15,7 @@
 #mapArea {
 	font-size:12px;
 	line-height:1.6em;
-	width:865px;
+	width:900px;
 	height:170px;
 	margin: 80px;
 	position:relative;
@@ -617,4 +617,8 @@
 	margin:20px auto;
 	border:1px solid red;
 	padding:5px;
+}
+
+.takasa{
+	height: 90px;
 }
