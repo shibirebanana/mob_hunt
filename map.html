@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://coffea.jp/tools/map/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>モブハンマップ</title>
+<link rel="stylesheet" type="text/css" href="./モブハントがめんどくさい人用マップ/cssreset-min.css">
+<link href="./モブハントがめんどくさい人用マップ/tool_style.css" rel="stylesheet" type="text/css">
+<link href="./モブハントがめんどくさい人用マップ/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" async="" src="./モブハントがめんどくさい人用マップ/analytics.js.ダウンロード"></script><script type="text/javascript" async="" src="./モブハントがめんどくさい人用マップ/js"></script><script src="./モブハントがめんどくさい人用マップ/jquery.min.js.ダウンロード"></script>
+<script src="./モブハントがめんどくさい人用マップ/map.js.ダウンロード"></script>
+<script async="" src="./モブハントがめんどくさい人用マップ/js(1)"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-36615903-5');
+</script>
+<script async="" src="./モブハントがめんどくさい人用マップ/f.txt"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-6174565177675925",
+          enable_page_level_ads: true
+     });
+</script>
+
+<!----------------------------------------->
+<script>
+	function foobar(id,cn) {
+	  if (!document.getElementById) return;
+	  if (!document.getElementById(id)) return;
+	  var onoff = !document.getElementById(id).checked;
+	  show_hide_items(cn, onoff);
+	}
+	function show_hide_items (cn,vsbl) {
+	  if (!document.getElementsByClassName) return;
+	  if (!document.getElementsByClassName(cn)) return;
+	  var obj = document.getElementsByClassName(cn);
+	  for (var idx = 0; idx < obj.length; idx++) {
+		if (vsbl) obj[idx].style.display = "none";
+		else obj[idx].style.display = "block";
+	  }
+	}
+	</script>
+<!----------------------------------------->
+
+</head>
+<body>
+
+	<!--[if lt IE 9]> 
+	<span class="ieInfo">IE8未対応です。ブラウザのバージョンアップをしてくださいです</span>
+	<style>#mapArea {display:none;}</style>
+	<![endif]-->
+
+	<div class="home">
+		<input type="checkbox" checked name="map08"	id="map08" onclick="foobar('map08','G8')">		<label for="map08">G 8 </label>
+		<input type="checkbox" checked name="map10" id="map10" onclick="foobar('map10','G10')">		<label for="map10">G10</label>
+		<input type="checkbox" checked name="map12" id="map12" onclick="foobar('map12','G12')">		<label for="map12">G12</label>
+		<input type="checkbox" checked name="map14" id="map14" onclick="foobar('map14','G14')">		<label for="map14">G14</label>
+	
+	</div>
+
+	<div id="mapArea">
+		<nav><!--エリア名-->
+			<ul id="menu"><!--エリア名-->
+				<li class="G8" id="areaName">低地ドラヴァニア</li>
+				<li class="G8" id="areaName">高地ドラヴァニア</li>
+				<li class="G8" id="areaName">ドラヴァニア雲海</li>
+				<li class="G8" id="areaName">クルザス西部高地</li>
+				<li class="G8" id="areaName">アバラシア雲海</li>
+				<li class="G8" id="areaName">アジス・ラー</li>
+
+				<li class="G10" id="areaName">ギラバニア辺境地帯</li>
+				<li class="G10" id="areaName">ギラバニア山岳地帯</li>
+				<li class="G10" id="areaName">ギラバニア湖畔地帯</li>
+				<li class="G10" id="areaName">紅玉海</li>
+				<li class="G10" id="areaName">ヤンサ</li>
+				<li class="G10" id="areaName">アジムステップ</li>
+
+				<li class="G12" id="areaName">イルメグ</li>
+				<li class="G12" id="areaName">レイクランド</li>
+				<li class="G12" id="areaName">アム・アレーン</li>
+				<li class="G12" id="areaName">ラケティカ大森林</li>
+				<li class="G12" id="areaName">コルシア島</li>
+				<li class="G12" id="areaName">テンペスト</li>
+				
+				<li class="G14" id="areaName">ラヴィリンソス</li>
+				<li class="G14" id="areaName">ウルティマ・トゥーレ</li>
+				<li class="G14" id="areaName">嘆きの海</li>
+				<li class="G14" id="areaName">サベネア島</li>
+				<li class="G14" id="areaName">ガレマルド</li>
+				<li class="G14" id="areaName">エルピス</li>
+<!-- 
+				<li class="Dawntrail" d="areaName">黄金1</li>
+				<li class="Dawntrail" d="areaName">黄金2</li>
+				<li class="Dawntrail" d="areaName">黄金3</li>
+				<li class="Dawntrail" d="areaName">黄金4</li>
+				<li class="Dawntrail" d="areaName">黄金5</li>
+				<li class="Dawntrail" d="areaName">黄金6</li> -->
+			</ul>
+		</nav>
+
+		<section><!--蒼天低地ドラヴァニア-->
+			<form id="chizu1"><!--蒼天-->
+				<ul id="mob">
+						<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/show1.png" width="100" height="100" style="position:absolute;top:000px;left:630px;"><input type="checkbox" value="01" data-pos="110,191" ><br><br><br><br><br></label></li>
+						<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/show2.png" width="100" height="100" style="position:absolute;top:100px;left:630px;"><input type="checkbox" value="02" data-pos="110,191" name="image"></label></li>
+					</ul>	
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>	
+
+		<section><!--蒼天高地ドラヴァニア-->
+			<form id="chizu2"><!--蒼天-->
+				<ul id="mob">
+					<li><label><input type="checkbox" value="01" data-pos="110,191">ガッリミムス</label></li>
+					<li><label><input type="checkbox" value="02" data-pos="445,376">グナース・ファイアードローン</label></li>
+					<li><label><input type="checkbox" value="02" data-pos="465,376">グナース・カルティベーター</label></li>
+					<li><label><input type="checkbox" value="02" data-pos="485,376">グナース・スチールドローン</label></li>
+					<li><label><input type="checkbox" value="20" data-pos="516,376">グナース・フォーリジャー</label></li>
+					<li><label><input type="checkbox" value="20" data-pos="536,376">グナース・ヘイルドローン</label></li>
+					<li><label><input type="checkbox" value="20" data-pos="556,376">グナース・アイアンドローン</label></li>
+					<li><label><input type="checkbox" value="03" data-pos="45,321">ゴールデンバンダースナッチ</label></li>
+					<li><label><input type="checkbox" value="04" data-pos="65,382">サンダードラゴン</label></li>
+					<li><label><input type="checkbox" value="05" data-pos="138,112">シリクタ</label></li>
+					<li><label><input type="checkbox" value="05" data-pos="158,112">ティラノサウルス</label></li>
+					<li><label><input type="checkbox" value="06" data-pos="198,288">ドラヴァニアン・エイビス</label></li>
+					<li><label><input type="checkbox" value="07" data-pos="430,75">ドラヴァニアン・ワイバーン</label></li>
+					<li><label><input type="checkbox" value="08" data-pos="420,317">ドラゴンフライ・ウォッチャー</label></li>
+					<li><label><input type="checkbox" value="04" data-pos="85,382">ドラゴンフライ・トレーサー</label></li>
+					<li><label><input type="checkbox" value="09" data-pos="177,424">バンダースナッチ</label></li>
+					<li><label><input type="checkbox" value="05" data-pos="178,112">ビネガロン</label></li>
+					<li><label><input type="checkbox" value="10" data-pos="268,456">フェザーフリー</label></li>
+					<li><label><input type="checkbox" value="11" data-pos="334,156">フォーランド・ヒッポセルフ</label></li>
+					<li><label><input type="checkbox" value="12" data-pos="160,339">ブラウンベアー</label></li>
+					<li><label><input type="checkbox" value="13" data-pos="500,46">ボーン・エイビス</label></li>
+					<li><label><input type="checkbox" value="14" data-pos="405,212">ミアキス</label></li>
+					<li><label><input type="checkbox" value="15" data-pos="300,312">メリアエ</label></li>
+					<li><label><input type="checkbox" value="16" data-pos="364,312">リバーナンカ</label></li>
+					<li><label><input type="checkbox" value="16" data-pos="384,312">リバーニンキ・ナンカ</label></li>
+					<li><label><input type="checkbox" value="17" data-pos="329,364">ロフタン</label></li>
+					<li><label><input type="checkbox" value="18" data-pos="474,199">ロス・ファイアドローン</label></li>
+					<li><label><input type="checkbox" value="18" data-pos="494,199">ロス・カルティベーター</label></li>
+					<li><label><input type="checkbox" value="18" data-pos="514,199">ロス・スチールドローン</label></li>
+					<li><label><input type="checkbox" value="19" data-pos="340,448">ワイルドチョコボ</label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>	
+
+		<section><!--蒼天ドラヴァニア雲海-->
+			<form id="chizu3"><!--蒼天-->
+				<ul id="mob">
+					<li><label><input type="checkbox" value="01" data-pos="316,352">アルケオダイノス</label></li>
+					<li><label><input type="checkbox" value="02" data-pos="395,159">アンフィプティレ</label></li>
+					<li><label><input type="checkbox" value="03" data-pos="233,324">ウアジェット</label></li>
+					<li><label><input type="checkbox" value="04" data-pos="205,249">ヴィーヴル</label></li>
+					<li><label><input type="checkbox" value="05" data-pos="79,48">ウェア・ドラゴン</label></li>
+					<li><label><input type="checkbox" value="06" data-pos="262,442">エルダーシリクタ</label></li>
+					<li><label><input type="checkbox" value="07" data-pos="364,298">エルダーワイバーン</label></li>
+					<li><label><input type="checkbox" value="08" data-pos="470,75">クラウドエイビス</label></li>
+					<li><label><input type="checkbox" value="09" data-pos="446,400">サンクチンニ</label></li>
+					<li><label><input type="checkbox" value="10" data-pos="209,411">トゥリヘンド</label></li>
+					<li><label><input type="checkbox" value="11" data-pos="135,226">ドラゴネット</label></li>
+					<li><label><input type="checkbox" value="12" data-pos="247,153">ナールド・メリアエ</label></li>
+					<li><label><input type="checkbox" value="13" data-pos="95,322">ブラッドドラゴン</label></li>
+					<li><label><input type="checkbox" value="14" data-pos="292,169">ブレード・ビネガロン</label></li>
+					<li><label><input type="checkbox" value="15" data-pos="187,138">ミスト・ドレイク</label></li>
+					<li><label><input type="checkbox" value="16" data-pos="397,409">ミスト・ビアスト</label></li>
+					<li><label><input type="checkbox" value="17" data-pos="270,273">モスドラゴン</label></li>
+					<li><label><input type="checkbox" value="18" data-pos="155,15">ライム・ゴーレム</label></li>
+					<li><label><input type="checkbox" value="19" data-pos="360,151">レッサードラゴン</label></li>
+					<li><label><input type="checkbox" value="20" data-pos="371,483">ロブケン</label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>	
+
+		<section><!--蒼天クルザス西部高地-->
+			<form id="chizu4"><!--蒼天-->
+				<ul id="mob">
+					<li><label><input type="checkbox" value="01" data-pos="160,80">アイスコマンダー</label></li>
+					<li><label><input type="checkbox" value="02" data-pos="465,260">アイスドブラン</label></li>
+					<li><label><input type="checkbox" value="03" data-pos="190,302">アイストラップ</label></li>
+					<li><label><input type="checkbox" value="04" data-pos="213,364">アップランド・ミロドン</label></li>
+					<li><label><input type="checkbox" value="05" data-pos="132,160">アルケオーニス</label></li>
+					<li><label><input type="checkbox" value="06" data-pos="92,385">インランド・トゥルスス</label></li>
+					<li><label><input type="checkbox" value="07" data-pos="82,109">ウィンドスルス</label></li>
+					<li><label><input type="checkbox" value="08" data-pos="186,208">ウーリーヤク</label></li>
+					<li><label><input type="checkbox" value="09" data-pos="233,417">グランド・アルケオーニス</label></li>
+					<li><label><input type="checkbox" value="10" data-pos="147,377">コールドウィンド・バテラー</label></li>
+					<li><label><input type="checkbox" value="11" data-pos="92,244">ジェラート</label></li>
+					<li><label><input type="checkbox" value="12" data-pos="301,447">シルバーウルフ</label></li>
+					<li><label><input type="checkbox" value="13" data-pos="371,340">スタインボック</label></li>
+					<li><label><input type="checkbox" value="14" data-pos="382,91">スレートイエティ</label></li>
+					<li><label><input type="checkbox" value="15" data-pos="61,307">スラッシュソブラン</label></li>
+					<li><label><input type="checkbox" value="24" data-pos="65,454">スリートラップ</label></li>
+					<li><label><input type="checkbox" value="16" data-pos="346,264">ソルベ</label></li>
+					<li><label><input type="checkbox" value="17" data-pos="400,385">ディープアイ</label></li>
+					<li><label><input type="checkbox" value="18" data-pos="286,69">フリーズドラゴン</label></li>
+					<li><label><input type="checkbox" value="19" data-pos="158,421">フロストグレネード</label></li>
+					<li><label><input type="checkbox" value="20" data-pos="326,409">ベルグスルス</label></li>
+					<li><label><input type="checkbox" value="21" data-pos="254,225">ボーラーベアー</label></li>
+					<li><label><input type="checkbox" value="22" data-pos="215,174">ルーム</label></li>
+					<li><label><input type="checkbox" value="23" data-pos="415,241">ローンイエティ</label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>	
+		
+		<section><!--蒼天アバラシア雲海-->
+			<form id="chizu5"><!--蒼天-->
+				<ul id="mob">
+					<li><label><input type="checkbox" value="01" data-pos="128,31">アバラシア・カイト</label></li>
+					<li><label><input type="checkbox" value="02" data-pos="61,306">アンズー</label></li>
+					<li><label><input type="checkbox" value="03" data-pos="487,265">ウィセント</label></li>
+					<li><label><input type="checkbox" value="04" data-pos="210,10">ウィンドウ・ワモーラ</label></li>
+					<li><label><input type="checkbox" value="04" data-pos="230,10">ウィンドウ・ワモーラカンパ</label></li>
+					<li><label><input type="checkbox" value="15" data-pos="254,459">ヴクライ・グンド</label></li>
+					<li><label><input type="checkbox" value="05" data-pos="200,300">ヴクライ・ブンド</label></li>
+					<li><label><input type="checkbox" value="06" data-pos="259,126">ヴクロイ・ブンド</label></li>
+					<li><label><input type="checkbox" value="07" data-pos="280,346">エンディミオン</label></li>
+					<li><label><input type="checkbox" value="06" data-pos="279,126">オサヌワ・ブモラ</label></li>
+					<li><label><input type="checkbox" value="08" data-pos="436,328">オブデラ</label></li>
+					<li><label><input type="checkbox" value="09" data-pos="480,124">ガストルニス</label></li>
+					<li><label><input type="checkbox" value="10" data-pos="406,355">クラウドウォーム</label></li>
+					<li><label><input type="checkbox" value="11" data-pos="77,48">グリフィン</label></li>
+					<li><label><input type="checkbox" value="12" data-pos="128,276">グランズ・キーパー</label></li>
+					<li><label><input type="checkbox" value="13" data-pos="445,181">ゲイラキャット</label></li>
+					<li><label><input type="checkbox" value="08" data-pos="456,328">コノドント</label></li>
+					<li><label><input type="checkbox" value="14" data-pos="380,285">コリガン</label></li>
+					<li><label><input type="checkbox" value="15" data-pos="274,459">サヌワ</label></li>
+					<li><label><input type="checkbox" value="05" data-pos="220,300">サヌワ・ブンド</label></li>
+					<li><label><input type="checkbox" value="16" data-pos="395,232">ダルメル</label></li>
+					<li><label><input type="checkbox" value="17" data-pos="62,186">ツィナハレ</label></li>
+					<li><label><input type="checkbox" value="18" data-pos="159,477">トコトコ</label></li>
+					<li><label><input type="checkbox" value="15" data-pos="294,459">ナツライ・グンド</label></li>
+					<li><label><input type="checkbox" value="05" data-pos="240,300">ナツライ・ブンド</label></li>
+					<li><label><input type="checkbox" value="06" data-pos="299,126">ナツロイ・ブンド</label></li>
+					<li><label><input type="checkbox" value="19" data-pos="385,438">バイッサ</label></li>
+					<li><label><input type="checkbox" value="22" data-pos="212,171">ブンド・トーテム</label></li>
+					<li><label><input type="checkbox" value="20" data-pos="303,262">モッキンバード・トーテム</label></li>
+					<li><label><input type="checkbox" value="05" data-pos="260,300">ランライ・ブンド</label></li>
+					<li><label><input type="checkbox" value="15" data-pos="314,459">ランライ・グンド</label></li>
+					<li><label><input type="checkbox" value="06" data-pos="319,126">ランロイ・ブンド</label></li>
+					<li><label><input type="checkbox" value="21" data-pos="388,36">ワイリー・パイッサ</label></li>
+					<li><label><input type="checkbox" value="23" data-pos="173,382">VIレギオン～</label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>	
+		
+		<section><!--蒼天アジス・ラー-->
+			<form id="chizu6"><!--蒼天-->
+				<ul id="mob">
+					<li><label><input type="checkbox" value="07" data-pos="62,376">アラガン・キマイラ</label></li>
+					<li><label><input type="checkbox" value="01" data-pos="193,7">アラガンワーク・ビット</label></li>
+					<li><label><input type="checkbox" value="02" data-pos="94,10">アラガンワーク・ハーベストマン</label></li>
+					<li><label><input type="checkbox" value="03" data-pos="145,202">アラガンワーク・パラディン</label></li>
+					<li><label><input type="checkbox" value="03" data-pos="165,202">アラガンワーク・エンジニア</label></li>
+					<li><label><input type="checkbox" value="14" data-pos="263,247">ウォースバイト</label></li>
+					<li><label><input type="checkbox" value="06" data-pos="202,192">エンフォースドロイド</label></li>
+					<li><label><input type="checkbox" value="12" data-pos="173,415">エンプーサ</label></li>
+					<li><label><input type="checkbox" value="04" data-pos="65,195">オウルベア</label></li>
+					<li><label><input type="checkbox" value="09" data-pos="137,432">コープスフラワー</label></li>
+					<li><label><input type="checkbox" value="14" data-pos="283,247">スフィンクス</label></li>
+					<li><label><input type="checkbox" value="10" data-pos="84,462">プロトナーガ</label></li>
+					<li><label><input type="checkbox" value="15" data-pos="388,220">メラシディアン・アンフィプティレ</label></li>
+					<li><label><input type="checkbox" value="17" data-pos="481,121">メラシディアン・ヴィーヴル</label></li>
+					<li><label><input type="checkbox" value="19" data-pos="458,10">メラシディアン・ドラゴネット</label></li>
+					<li><label><input type="checkbox" value="25" data-pos="340,36">メラシディアン・ドラゴン</label></li>
+					<li><label><input type="checkbox" value="16" data-pos="367,154">メラシディアン・ファラク</label></li>
+					<li><label><input type="checkbox" value="18" data-pos="409,22">メラシディアン・ブロビニャック</label></li>
+					<li><label><input type="checkbox" value="13" data-pos="103,327">ラミア・サイブリッド</label></li>
+					<li><label><input type="checkbox" value="13" data-pos="123,327">ラミア・テリトーク</label></li>
+					<li><label><input type="checkbox" value="05" data-pos="166,31">ルークスナッパー</label></li>
+					<li><label><input type="checkbox" value="11" data-pos="104,482">レプトイド</label></li>
+					<li><label><input type="checkbox" value="20" data-pos="434,145">レッサーハイドラ</label></li>
+					<li><label><input type="checkbox" value="22" data-pos="416,433">VIレギオン～</label></li>
+					<li><label><input type="checkbox" value="23" data-pos="430,300">魔導アダマンクロー</label></li>
+					<li><label><input type="checkbox" value="24" data-pos="350,330">魔導コロッサス</label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>
+
+		<section><!--紅蓮ギラバニア辺境-->
+			<form id="chizu7"><!--紅蓮-->
+				<ul id="mob">
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア辺境/show1.png" width="150" height="150" style="position:absolute;top:000px;left:587px;"><input type="checkbox" value="01" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア辺境/show2.png" width="150" height="150" style="position:absolute;top:000px;left:740px;"><input type="checkbox" value="02" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア辺境/show3.png" width="150" height="150" style="position:absolute;top:153px;left:587px;"><input type="checkbox" value="03" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア辺境/show4.png" width="150" height="150" style="position:absolute;top:153px;left:740px;"><input type="checkbox" value="04" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア辺境/show5.png" width="150" height="150" style="position:absolute;top:306px;left:587px;"><input type="checkbox" value="05" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア辺境/show6.png" width="150" height="150" style="position:absolute;top:306px;left:740px;"><input type="checkbox" value="06" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア辺境/show7.png" width="150" height="150" style="position:absolute;top:459px;left:587px;"><input type="checkbox" value="07" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア辺境/show8.png" width="150" height="150" style="position:absolute;top:459px;left:740px;"><input type="checkbox" value="08" data-pos="110,191"></label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>	
+		
+		<section><!--紅蓮ギラバニア山岳-->
+			<form id="chizu8"><!--紅蓮-->
+				<ul id="mob">
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア山岳/show1.png" width="150" height="150" style="position:absolute;top:000px;left:587px;"><input type="checkbox" value="01" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア山岳/show2.png" width="150" height="150" style="position:absolute;top:000px;left:740px;"><input type="checkbox" value="02" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア山岳/show3.png" width="150" height="150" style="position:absolute;top:153px;left:587px;"><input type="checkbox" value="03" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア山岳/show4.png" width="150" height="150" style="position:absolute;top:153px;left:740px;"><input type="checkbox" value="04" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア山岳/show5.png" width="150" height="150" style="position:absolute;top:306px;left:587px;"><input type="checkbox" value="05" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア山岳/show6.png" width="150" height="150" style="position:absolute;top:306px;left:740px;"><input type="checkbox" value="06" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア山岳/show7.png" width="150" height="150" style="position:absolute;top:459px;left:587px;"><input type="checkbox" value="07" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア山岳/show8.png" width="150" height="150" style="position:absolute;top:459px;left:740px;"><input type="checkbox" value="08" data-pos="110,191"></label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>	
+		
+		<section><!--紅蓮ギラバニア湖畔-->
+			<form id="chizu9"><!--紅蓮-->
+				<ul id="mob">
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア湖畔/show1.png" width="150" height="150" style="position:absolute;top:000px;left:587px;"><input type="checkbox" value="01" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア湖畔/show2.png" width="150" height="150" style="position:absolute;top:000px;left:740px;"><input type="checkbox" value="02" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア湖畔/show3.png" width="150" height="150" style="position:absolute;top:153px;left:587px;"><input type="checkbox" value="03" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア湖畔/show4.png" width="150" height="150" style="position:absolute;top:153px;left:740px;"><input type="checkbox" value="04" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア湖畔/show5.png" width="150" height="150" style="position:absolute;top:306px;left:587px;"><input type="checkbox" value="05" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア湖畔/show6.png" width="150" height="150" style="position:absolute;top:306px;left:740px;"><input type="checkbox" value="06" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア湖畔/show7.png" width="150" height="150" style="position:absolute;top:459px;left:587px;"><input type="checkbox" value="07" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア湖畔/show8.png" width="150" height="150" style="position:absolute;top:459px;left:740px;"><input type="checkbox" value="08" data-pos="110,191"></label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>	
+
+		<section><!--紅蓮紅玉海-->
+			<form id="chizu10"><!--紅蓮-->
+				<ul id="mob">
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/紅玉海/show1.png" width="150" height="150" style="position:absolute;top:000px;left:587px;"><input type="checkbox" value="01" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/紅玉海/show2.png" width="150" height="150" style="position:absolute;top:000px;left:740px;"><input type="checkbox" value="02" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/紅玉海/show3.png" width="150" height="150" style="position:absolute;top:153px;left:587px;"><input type="checkbox" value="03" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/紅玉海/show4.png" width="150" height="150" style="position:absolute;top:153px;left:740px;"><input type="checkbox" value="04" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/紅玉海/show5.png" width="150" height="150" style="position:absolute;top:306px;left:587px;"><input type="checkbox" value="05" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/紅玉海/show6.png" width="150" height="150" style="position:absolute;top:306px;left:740px;"><input type="checkbox" value="06" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/紅玉海/show7.png" width="150" height="150" style="position:absolute;top:459px;left:587px;"><input type="checkbox" value="07" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/紅玉海/show8.png" width="150" height="150" style="position:absolute;top:459px;left:740px;"><input type="checkbox" value="08" data-pos="110,191"></label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>	
+
+		<section><!--紅蓮ヤンサ-->
+			<form id="chizu11"><!--紅蓮-->
+				<ul id="mob">
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ヤンサ/show1.png" width="150" height="150" style="position:absolute;top:000px;left:587px;"><input type="checkbox" value="01" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ヤンサ/show2.png" width="150" height="150" style="position:absolute;top:000px;left:740px;"><input type="checkbox" value="02" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ヤンサ/show3.png" width="150" height="150" style="position:absolute;top:153px;left:587px;"><input type="checkbox" value="03" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ヤンサ/show4.png" width="150" height="150" style="position:absolute;top:153px;left:740px;"><input type="checkbox" value="04" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ヤンサ/show5.png" width="150" height="150" style="position:absolute;top:306px;left:587px;"><input type="checkbox" value="05" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ヤンサ/show6.png" width="150" height="150" style="position:absolute;top:306px;left:740px;"><input type="checkbox" value="06" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ヤンサ/show7.png" width="150" height="150" style="position:absolute;top:459px;left:587px;"><input type="checkbox" value="07" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ヤンサ/show8.png" width="150" height="150" style="position:absolute;top:459px;left:740px;"><input type="checkbox" value="08" data-pos="110,191"></label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>	
+		
+		<section><!--紅蓮アジムステップ-->
+			<form id="chizu12"><!--紅蓮-->
+				<ul id="mob">
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/アジムステップ/show1.png" width="150" height="150" style="position:absolute;top:000px;left:587px;"><input type="checkbox" value="01" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/アジムステップ/show2.png" width="150" height="150" style="position:absolute;top:000px;left:740px;"><input type="checkbox" value="02" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/アジムステップ/show3.png" width="150" height="150" style="position:absolute;top:153px;left:587px;"><input type="checkbox" value="03" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/アジムステップ/show4.png" width="150" height="150" style="position:absolute;top:153px;left:740px;"><input type="checkbox" value="04" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/アジムステップ/show5.png" width="150" height="150" style="position:absolute;top:306px;left:587px;"><input type="checkbox" value="05" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/アジムステップ/show6.png" width="150" height="150" style="position:absolute;top:306px;left:740px;"><input type="checkbox" value="06" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/アジムステップ/show7.png" width="150" height="150" style="position:absolute;top:459px;left:587px;"><input type="checkbox" value="07" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/アジムステップ/show8.png" width="150" height="150" style="position:absolute;top:459px;left:740px;"><input type="checkbox" value="08" data-pos="110,191"></label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>
+
+		<section><!--漆黒イルメグ-->
+			<form id="chizu13"><!--漆黒-->
+				<ul id="mob">
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/イルメグ/show1.png" width="150" height="150" style="position:absolute;top:000px;left:587px;"><input type="checkbox" value="01" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/イルメグ/show2.png" width="150" height="150" style="position:absolute;top:000px;left:740px;"><input type="checkbox" value="02" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/イルメグ/show3.png" width="150" height="150" style="position:absolute;top:153px;left:587px;"><input type="checkbox" value="03" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/イルメグ/show4.png" width="150" height="150" style="position:absolute;top:153px;left:740px;"><input type="checkbox" value="04" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/イルメグ/show5.png" width="150" height="150" style="position:absolute;top:306px;left:587px;"><input type="checkbox" value="05" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/イルメグ/show6.png" width="150" height="150" style="position:absolute;top:306px;left:740px;"><input type="checkbox" value="06" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/イルメグ/show7.png" width="150" height="150" style="position:absolute;top:459px;left:587px;"><input type="checkbox" value="07" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/イルメグ/show8.png" width="150" height="150" style="position:absolute;top:459px;left:740px;"><input type="checkbox" value="08" data-pos="110,191"></label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>
+
+		<section><!--漆黒レイクランド-->
+			<form id="chizu14"><!--漆黒-->
+				<ul id="mob">
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/レイクランド/show1.png" width="150" height="150" style="position:absolute;top:000px;left:587px;"><input type="checkbox" value="01" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/レイクランド/show2.png" width="150" height="150" style="position:absolute;top:000px;left:740px;"><input type="checkbox" value="02" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/レイクランド/show3.png" width="150" height="150" style="position:absolute;top:153px;left:587px;"><input type="checkbox" value="03" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/レイクランド/show4.png" width="150" height="150" style="position:absolute;top:153px;left:740px;"><input type="checkbox" value="04" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/レイクランド/show5.png" width="150" height="150" style="position:absolute;top:306px;left:587px;"><input type="checkbox" value="05" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/レイクランド/show6.png" width="150" height="150" style="position:absolute;top:306px;left:740px;"><input type="checkbox" value="06" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/レイクランド/show7.png" width="150" height="150" style="position:absolute;top:459px;left:587px;"><input type="checkbox" value="07" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/レイクランド/show8.png" width="150" height="150" style="position:absolute;top:459px;left:740px;"><input type="checkbox" value="08" data-pos="110,191"></label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>
+
+		<section><!--漆黒アムアレーン-->
+			<form id="chizu15"><!--漆黒-->
+				<ul id="mob">
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/アムアレーン/show1.png" width="150" height="150" style="position:absolute;top:000px;left:587px;"><input type="checkbox" value="01" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/アムアレーン/show2.png" width="150" height="150" style="position:absolute;top:000px;left:740px;"><input type="checkbox" value="02" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/アムアレーン/show3.png" width="150" height="150" style="position:absolute;top:153px;left:587px;"><input type="checkbox" value="03" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/アムアレーン/show4.png" width="150" height="150" style="position:absolute;top:153px;left:740px;"><input type="checkbox" value="04" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/アムアレーン/show5.png" width="150" height="150" style="position:absolute;top:306px;left:587px;"><input type="checkbox" value="05" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/アムアレーン/show6.png" width="150" height="150" style="position:absolute;top:306px;left:740px;"><input type="checkbox" value="06" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/アムアレーン/show7.png" width="150" height="150" style="position:absolute;top:459px;left:587px;"><input type="checkbox" value="07" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/アムアレーン/show8.png" width="150" height="150" style="position:absolute;top:459px;left:740px;"><input type="checkbox" value="08" data-pos="110,191"></label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>
+
+		<section><!--漆黒ラケティカ大森林-->
+			<form id="chizu16"><!--漆黒-->
+				<ul id="mob">
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/ラケティカ大森林/show1.png" width="150" height="150" style="position:absolute;top:000px;left:587px;"><input type="checkbox" value="01" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/ラケティカ大森林/show2.png" width="150" height="150" style="position:absolute;top:000px;left:740px;"><input type="checkbox" value="02" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/ラケティカ大森林/show3.png" width="150" height="150" style="position:absolute;top:153px;left:587px;"><input type="checkbox" value="03" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/ラケティカ大森林/show4.png" width="150" height="150" style="position:absolute;top:153px;left:740px;"><input type="checkbox" value="04" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/ラケティカ大森林/show5.png" width="150" height="150" style="position:absolute;top:306px;left:587px;"><input type="checkbox" value="05" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/ラケティカ大森林/show6.png" width="150" height="150" style="position:absolute;top:306px;left:740px;"><input type="checkbox" value="06" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/ラケティカ大森林/show7.png" width="150" height="150" style="position:absolute;top:459px;left:587px;"><input type="checkbox" value="07" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/ラケティカ大森林/show8.png" width="150" height="150" style="position:absolute;top:459px;left:740px;"><input type="checkbox" value="08" data-pos="110,191"></label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>
+
+		<section><!--漆黒コルシア島-->
+			<form id="chizu17"><!--漆黒-->
+				<ul id="mob">
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/コルシア/show1.png" width="150" height="150" style="position:absolute;top:000px;left:587px;"><input type="checkbox" value="01" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/コルシア/show2.png" width="150" height="150" style="position:absolute;top:000px;left:740px;"><input type="checkbox" value="02" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/コルシア/show3.png" width="150" height="150" style="position:absolute;top:153px;left:587px;"><input type="checkbox" value="03" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/コルシア/show4.png" width="150" height="150" style="position:absolute;top:153px;left:740px;"><input type="checkbox" value="04" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/コルシア/show5.png" width="150" height="150" style="position:absolute;top:306px;left:587px;"><input type="checkbox" value="05" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/コルシア/show6.png" width="150" height="150" style="position:absolute;top:306px;left:740px;"><input type="checkbox" value="06" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/コルシア/show7.png" width="150" height="150" style="position:absolute;top:459px;left:587px;"><input type="checkbox" value="07" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/コルシア/show8.png" width="150" height="150" style="position:absolute;top:459px;left:740px;"><input type="checkbox" value="08" data-pos="110,191"></label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>
+
+		<section><!--漆黒テンペスト-->
+			<form id="chizu18"><!--漆黒-->
+				<ul id="mob">
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/テンペスト/show1.png" width="150" height="150" style="position:absolute;top:000px;left:587px;"><input type="checkbox" value="01" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/テンペスト/show2.png" width="150" height="150" style="position:absolute;top:000px;left:740px;"><input type="checkbox" value="02" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/テンペスト/show3.png" width="150" height="150" style="position:absolute;top:153px;left:587px;"><input type="checkbox" value="03" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/テンペスト/show4.png" width="150" height="150" style="position:absolute;top:153px;left:740px;"><input type="checkbox" value="04" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/テンペスト/show5.png" width="150" height="150" style="position:absolute;top:306px;left:587px;"><input type="checkbox" value="05" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/テンペスト/show6.png" width="150" height="150" style="position:absolute;top:306px;left:740px;"><input type="checkbox" value="06" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/テンペスト/show7.png" width="150" height="150" style="position:absolute;top:459px;left:587px;"><input type="checkbox" value="07" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g12/テンペスト/show8.png" width="150" height="150" style="position:absolute;top:459px;left:740px;"><input type="checkbox" value="08" data-pos="110,191"></label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>
+
+		<section><!--暁月ラヴィリンソス-->
+			<form id="chizu19"><!--暁月-->
+				<ul id="mob">
+					<li><label><input type="checkbox" value="01" data-pos="378,198">カリブー</label></li>
+					<li><label><input type="checkbox" value="02" data-pos="367,140">クリオコナイト</label></li>
+					<li><label><input type="checkbox" value="03" data-pos="437,381">ゲノーモス</label></li>
+					<li><label><input type="checkbox" value="04" data-pos="462,174">ストレイ・なんとか</label></li>
+					<li><label><input type="checkbox" value="05" data-pos="315,402">セントラル・アナラ</label></li>
+					<li><label><input type="checkbox" value="06" data-pos="336,323">セントラル・アニラ</label></li>
+					<li><label><input type="checkbox" value="07" data-pos="433,297">セントラル・アーパス</label></li>
+					<li><label><input type="checkbox" value="08" data-pos="231,440">セントラル・ソーマ</label></li>
+					<li><label><input type="checkbox" value="09" data-pos="174,156">セントラル・ダラ</label></li>
+					<li><label><input type="checkbox" value="10" data-pos="264,201">セントラル・プラバーサ</label></li>
+					<li><label><input type="checkbox" value="11" data-pos="168,277">トロル</label></li>
+					<li><label><input type="checkbox" value="12" data-pos="249,104">ノーザン・スナップウィード</label></li>
+					<li><label><input type="checkbox" value="13" data-pos="440,124">ブラックメリノ</label></li>
+					<li><label><input type="checkbox" value="14" data-pos="231,344">ペプレド</label></li>
+					<li><label><input type="checkbox" value="15" data-pos="124,325">ベルカナ</label></li>
+					<li><label><input type="checkbox" value="16" data-pos="124,325">マウンテンチキン</label></li>
+					<li><label><input type="checkbox" value="17" data-pos="124,325">ミスリルキャップ</label></li>
+					<li><label><input type="checkbox" value="18" data-pos="124,325">メリノ</label></li>
+					<li><label><input type="checkbox" value="19" data-pos="124,325">ヤーコウ</label></li>
+					<li><label><input type="checkbox" value="20" data-pos="124,325">ラヴィリンソス・サンクチンニ</label></li>
+					<li><label><input type="checkbox" value="21" data-pos="124,325">ラヴィリンソス・スクリーマ</label></li>
+					<li><label><input type="checkbox" value="22" data-pos="124,325">ラヴィリンソス・ナルブルーイ</label></li>
+					<li><label><input type="checkbox" value="23" data-pos="124,325">リマスカブラ</label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>
+
+		<section><!--暁月ウルティマトゥーレ-->
+			<form id="chizu20"><!--暁月-->
+				<ul id="mob">
+					<li><label><input type="checkbox" value="01" data-pos="378,198">アザーワン</label></li>
+					<li><label><input type="checkbox" value="02" data-pos="367,140">ステラ・アンフィプテレ</label></li>
+					<li><label><input type="checkbox" value="03" data-pos="437,381">ステラ・カラペスドラゴン</label></li>
+					<li><label><input type="checkbox" value="04" data-pos="462,174">ステラ・ドラゴン</label></li>
+					<li><label><input type="checkbox" value="05" data-pos="315,402">ステラ・ドラゴンフライ</label></li>
+					<li><label><input type="checkbox" value="06" data-pos="336,323">ステラ・ブロビニャク</label></li>
+					<li><label><input type="checkbox" value="07" data-pos="433,297">ステラ・レッサードラゴン</label></li>
+					<li><label><input type="checkbox" value="08" data-pos="231,440">ステラ・ワイバーン</label></li>
+					<li><label><input type="checkbox" value="09" data-pos="174,156">デルタ</label></li>
+					<li><label><input type="checkbox" value="10" data-pos="264,201">ドリフティング・イーア</label></li>
+					<li><label><input type="checkbox" value="11" data-pos="168,277">ブロークン・オミクロン上</label></li>
+					<li><label><input type="checkbox" value="12" data-pos="249,104">ベータ上</label></li>
+					<li><label><input type="checkbox" value="13" data-pos="440,124">ラムダ</label></li>
+					<li><label><input type="checkbox" value="14" data-pos="231,344">ルミニオン</label></li>
+					<li><label><input type="checkbox" value="15" data-pos="124,325">レベルトリッカー</label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>
+
+		<section><!--暁月嘆きの海-->
+			<form id="chizu21"><!--暁月-->
+				<ul id="mob">
+					<li><label><input type="checkbox" value="01" data-pos="378,198">アーマルコライト</label></li>
+					<li><label><input type="checkbox" value="02" data-pos="367,140">ウィーパー</label></li>
+					<li><label><input type="checkbox" value="03" data-pos="437,381">オスキュレーター</label></li>
+					<li><label><input type="checkbox" value="04" data-pos="462,174">クリーナー</label></li>
+					<li><label><input type="checkbox" value="05" data-pos="315,402">ケアテイカー</label></li>
+					<li><label><input type="checkbox" value="06" data-pos="336,323">サポーター</label></li>
+					<li><label><input type="checkbox" value="07" data-pos="433,297">シンカー</label></li>
+					<li><label><input type="checkbox" value="08" data-pos="231,440">スウィーパー</label></li>
+					<li><label><input type="checkbox" value="09" data-pos="174,156">スクレーパー</label></li>
+					<li><label><input type="checkbox" value="10" data-pos="264,201">ダイナマイト</label></li>
+					<li><label><input type="checkbox" value="11" data-pos="168,277">ダウンフォール・アラーム</label></li>
+					<li><label><input type="checkbox" value="12" data-pos="249,104">ダウンフォール・ドロイド</label></li>
+					<li><label><input type="checkbox" value="13" data-pos="440,124">ダウンフォール・ハンター</label></li>
+					<li><label><input type="checkbox" value="14" data-pos="231,344">ダフニア</label></li>
+					<li><label><input type="checkbox" value="15" data-pos="124,325">トリマー</label></li>
+					<li><label><input type="checkbox" value="16" data-pos="124,325">パノプト</label></li>
+					<li><label><input type="checkbox" value="17" data-pos="124,325">ムース</label></li>
+					<li><label><input type="checkbox" value="18" data-pos="124,325">ルナテンダー</label></li>
+					<li><label><input type="checkbox" value="19" data-pos="124,325">レゴリス</label></li>
+					<li><label><input type="checkbox" value="20" data-pos="124,325">ワンダラー</label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>
+
+		<section><!--暁月サベネア島-->
+			<form id="chizu22"><!--暁月-->
+				<ul id="mob">
+					<li><label><input type="checkbox" value="01" data-pos="378,198">アキャーリクラブ</label></li>
+					<li><label><input type="checkbox" value="02" data-pos="367,140">アシュヴァッタ</label></li>
+					<li><label><input type="checkbox" value="03" data-pos="437,381">ヴァジュララングラ</label></li>
+					<li><label><input type="checkbox" value="04" data-pos="462,174">ヴァルラス</label></li>
+					<li><label><input type="checkbox" value="05" data-pos="315,402">オドカン</label></li>
+					<li><label><input type="checkbox" value="06" data-pos="336,323">ガジャ</label></li>
+					<li><label><input type="checkbox" value="07" data-pos="433,297">カチャパ</label></li>
+					<li><label><input type="checkbox" value="08" data-pos="231,440">グハーシャヤ</label></li>
+					<li><label><input type="checkbox" value="09" data-pos="174,156">クンビーラ</label></li>
+					<li><label><input type="checkbox" value="10" data-pos="264,201">サベネアンジャムメル</label></li>
+					<li><label><input type="checkbox" value="11" data-pos="168,277">シュトラムルグ</label></li>
+					<li><label><input type="checkbox" value="12" data-pos="249,104">シーングパクシー</label></li>
+					<li><label><input type="checkbox" value="13" data-pos="440,124">スターマイト</label></li>
+					<li><label><input type="checkbox" value="14" data-pos="231,344">チャムロッシュ</label></li>
+					<li><label><input type="checkbox" value="15" data-pos="124,325">バブーン</label></li>
+					<li><label><input type="checkbox" value="16" data-pos="124,325">ハヌマンラングール</label></li>
+					<li><label><input type="checkbox" value="17" data-pos="124,325">ハンサ</label></li>
+					<li><label><input type="checkbox" value="18" data-pos="124,325">ピシャーチャ</label></li>
+					<li><label><input type="checkbox" value="19" data-pos="124,325">ブンジャンガ</label></li>
+					<li><label><input type="checkbox" value="20" data-pos="124,325">マンジュサカ</label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>
+
+		<section><!--暁月ガレマルド-->
+			<form id="chizu23"><!--暁月-->
+				<ul id="mob">
+					<li><label><input type="checkbox" value="01" data-pos="378,198">アルマスティ</label></li>
+					<li><label><input type="checkbox" value="02" data-pos="367,140">イルサバード・トゥルスス</label></li>
+					<li><label><input type="checkbox" value="03" data-pos="437,381">エブラーナベアー</label></li>
+					<li><label><input type="checkbox" value="04" data-pos="462,174">エブラーナ・アイストラップ</label></li>
+					<li><label><input type="checkbox" value="05" data-pos="315,402">オウヴィボス</label></li>
+					<li><label><input type="checkbox" value="06" data-pos="336,323">オーバーグロウンローズ</label></li>
+					<li><label><input type="checkbox" value="07" data-pos="433,297">オーバーチューンド</label></li>
+					<li><label><input type="checkbox" value="08" data-pos="231,440">オートマチック・アヴェンジャー</label></li>
+					<li><label><input type="checkbox" value="09" data-pos="174,156">オートマチック・キャバルリー</label></li>
+					<li><label><input type="checkbox" value="10" data-pos="264,201">オートマチック・コロッサス</label></li>
+					<li><label><input type="checkbox" value="11" data-pos="168,277">オートマチック・サテライト</label></li>
+					<li><label><input type="checkbox" value="12" data-pos="249,104">オートマチック・スラッシャー</label></li>
+					<li><label><input type="checkbox" value="13" data-pos="440,124">オートマチック・デスマシーン</label></li>
+					<li><label><input type="checkbox" value="14" data-pos="231,344">オートマチック・ビット</label></li>
+					<li><label><input type="checkbox" value="15" data-pos="124,325">オートマチック・マグナローダー</label></li>
+					<li><label><input type="checkbox" value="16" data-pos="124,325">カニスルピナス</label></li>
+					<li><label><input type="checkbox" value="17" data-pos="124,325">サイガ</label></li>
+					<li><label><input type="checkbox" value="18" data-pos="124,325">セルリウムゾブラン</label></li>
+					<li><label><input type="checkbox" value="19" data-pos="124,325">モロズゴ</label></li>
+					<li><label><input type="checkbox" value="20" data-pos="124,325">ヨトゥン</label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>
+
+		<section><!--暁月エルピス-->
+			<form id="chizu24"><!--暁月-->
+				<ul id="mob">
+					<li><label><input type="checkbox" value="01" data-pos="378,198">アカンサ</label></li>
+					<li><label><input type="checkbox" value="02" data-pos="367,140">イアンティネ・ペタルダ</label></li>
+					<li><label><input type="checkbox" value="03" data-pos="437,381">イグドリア</label></li>
+					<li><label><input type="checkbox" value="04" data-pos="462,174">ウラヌー・メデューサ</label></li>
+					<li><label><input type="checkbox" value="05" data-pos="315,402">エルピスタウロス</label></li>
+					<li><label><input type="checkbox" value="06" data-pos="336,323">オキュペテ</label></li>
+					<li><label><input type="checkbox" value="07" data-pos="433,297">オピオタウロス</label></li>
+					<li><label><input type="checkbox" value="08" data-pos="231,440">オピオン</label></li>
+					<li><label><input type="checkbox" value="09" data-pos="174,156">オリジン・ヒッポセルフ</label></li>
+					<li><label><input type="checkbox" value="10" data-pos="264,201">キアネ・ペタルダ</label></li>
+					<li><label><input type="checkbox" value="11" data-pos="168,277">グリュプス</label></li>
+					<li><label><input type="checkbox" value="12" data-pos="249,104">コーキネ・ペタルダ</label></li>
+					<li><label><input type="checkbox" value="13" data-pos="440,124">ハルピュイア</label></li>
+					<li><label><input type="checkbox" value="14" data-pos="231,344">バード・オブ・エルピス</label></li>
+					<li><label><input type="checkbox" value="15" data-pos="124,325">ヒッペー</label></li>
+					<li><label><input type="checkbox" value="16" data-pos="124,325">ファノプシュケ</label></li>
+					<li><label><input type="checkbox" value="17" data-pos="124,325">ペガソス</label></li>
+					<li><label><input type="checkbox" value="18" data-pos="124,325">マーカス・モルボル</label></li>
+					<li><label><input type="checkbox" value="19" data-pos="124,325">メデューサ（下）</label></li>
+					<li><label><input type="checkbox" value="20" data-pos="124,325">メラニオン</label></li>
+					<li><label><input type="checkbox" value="21" data-pos="124,325">モノセロス</label></li>
+					<li><label><input type="checkbox" value="22" data-pos="124,325">リコペルシクム</label></li>
+					<li><label><input type="checkbox" value="23" data-pos="124,325">レモラ</label></li>
+					<li><label><input type="checkbox" value="24" data-pos="124,325">ロティス</label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>
+
+		
+		<!-- <div id="debug" style="position:absolute;top:900px;left:0;font-size:20px;"></div> -->
+		<!-- <img id="guide" src="モブハントがめんどくさい人用マップ/images/guide.png" style="position:absolute;top:140px;left:0;z-index:300"> -->
+		
+		<div id="allReset"><input type="button" value="すべてのエリアをリセット">
+		
+		<span style="color:#C10003">■</span>通常マップ
+		<span style="color:#FFB600">■</span>高所
+		<span style="color:#8D00E0">■</span>洞窟内など
+		<span style="color:#00ffea">■</span>FATE
+		</div>
+		<div>
+			<p><a href="index2.html">新生</a></p>
+		</div>
+	</div>
+
+</body></html>
