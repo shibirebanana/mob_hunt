@@ -135,6 +135,25 @@
 #mapArea > section:nth-of-type(24) {
 	background-image:url(images/map24.jpg);
 }
+#mapArea > section:nth-of-type(25) {
+	background-image:url(images/map25.jpg);
+}
+#mapArea > section:nth-of-type(26) {
+	background-image:url(images/map26.jpg);
+}
+#mapArea > section:nth-of-type(27) {
+	background-image:url(images/map27.jpg);
+}
+#mapArea > section:nth-of-type(28) {
+	background-image:url(images/map28.jpg);
+}
+#mapArea > section:nth-of-type(29) {
+	background-image:url(images/map29.jpg);
+}
+#mapArea > section:nth-of-type(30) {
+	background-image:url(images/map30.jpg);
+}
+
 
 
 #mapArea > section form {
