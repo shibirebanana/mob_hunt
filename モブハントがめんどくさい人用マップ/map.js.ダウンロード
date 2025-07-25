@@ -55,7 +55,7 @@ $(function(){
 		var checkList = $('#'+tName+' :checked').length;
 		var areaNo = tName.slice(4)-1;
 		if(checkList > 0) {
-			$('#menu li').eq(areaNo).css('background-color','darkred');
+			$('#menu li').eq(areaNo).css('background-color','black');
 		}else {
 			$('#menu li').eq(areaNo).css('background-color','black');
 		}
@@ -149,7 +149,7 @@ $(function(){
 		var checkList = $('#'+tName+' :checked').length;
 		var areaNo = tName.slice(4)-1;
 		if(checkList > 0) {
-			$('#menu li').eq(areaNo).css('background-color','darkred');
+			$('#menu li').eq(areaNo).css('background-color','black');
 		}else {
 			$('#menu li').eq(areaNo).css('background-color','black');
 		}

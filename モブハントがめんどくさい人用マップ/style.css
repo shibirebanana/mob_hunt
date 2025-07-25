@@ -153,7 +153,24 @@
 #mapArea > section:nth-of-type(30) {
 	background-image:url(images/map30.jpg);
 }
-
+#mapArea > section:nth-of-type(31) {
+	background-image:url(images/map31.jpg);
+}
+#mapArea > section:nth-of-type(32) {
+	background-image:url(images/map32.jpg);
+}
+#mapArea > section:nth-of-type(33) {
+	background-image:url(images/map33.jpg);
+}
+#mapArea > section:nth-of-type(34) {
+	background-image:url(images/map34.jpg);
+}
+#mapArea > section:nth-of-type(35) {
+	background-image:url(images/map35.jpg);
+}
+#mapArea > section:nth-of-type(36) {
+	background-image:url(images/map36.jpg);
+}
 
 
 #mapArea > section form {
@@ -624,7 +641,7 @@
 	color: #333;
 }
 #allReset a:hover {
-	color: darkred;
+	color: black;
 }
 
 .ieInfo {

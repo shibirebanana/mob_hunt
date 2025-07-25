@@ -55,6 +55,7 @@
 	<div class="home">
 		<input type="checkbox" checked name="map08"	id="map08" onclick="foobar('map08','G8')">		<label for="map08">G 8 </label>
 		<input type="checkbox" checked name="map10" id="map10" onclick="foobar('map10','G10')">		<label for="map10">G10</label>
+		<input type="checkbox" checked name="deep1" id="deep1" onclick="foobar('deep1','DEP')">		<label for="deep1">深層</label>
 		<input type="checkbox" checked name="map12" id="map12" onclick="foobar('map12','G12')">		<label for="map12">G12</label>
 		<input type="checkbox" checked name="map14" id="map14" onclick="foobar('map14','G14')">		<label for="map14">G14</label>
 		<input type="checkbox" checked name="map14" id="map17" onclick="foobar('map17','G17')">		<label for="map17">G17</label>
@@ -63,7 +64,7 @@
 
 	<div id="mapArea">
 		<nav><!--エリア名-->
-			<ul id="menu"><!--エリア名-->
+			<ul id="menu" style="width: 900px;"><!--エリア名-->
 				<li class="G8" id="areaName">低地ドラヴァニア</li>
 				<li class="G8" id="areaName">高地ドラヴァニア</li>
 				<li class="G8" id="areaName">ドラヴァニア雲海</li>
@@ -77,6 +78,13 @@
 				<li class="G10" id="areaName">紅玉海</li>
 				<li class="G10" id="areaName">ヤンサ</li>
 				<li class="G10" id="areaName">アジムステップ</li>
+
+				<li class="DEP" id="areaName" style="background-color:darkblue;">ギラバニア辺境地帯</li>
+				<li class="DEP" id="areaName" style="background-color:darkblue;">ギラバニア山岳地帯</li>
+				<li class="DEP" id="areaName" style="background-color:darkblue;">ギラバニア湖畔地帯</li>
+				<li class="DEP" id="areaName" style="background-color:darkblue;">紅玉海</li>
+				<li class="DEP" id="areaName" style="background-color:darkblue;">ヤンサ</li>
+				<li class="DEP" id="areaName" style="background-color:darkblue;">アジムステップ</li>
 
 				<li class="G12" id="areaName">イルメグ</li>
 				<li class="G12" id="areaName">レイクランド</li>
@@ -253,6 +261,87 @@
 				<input type="reset" value="このエリアをリセット">
 			</form>
 		</section>
+
+				<section><!--紅蓮ギラバニア辺境-->
+			<form id="deep1"><!--紅蓮-->
+				<ul id="mob">
+					<!-- <li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア辺境/deep1.png" width="150" height="150" style="position:absolute;top:000px;left:587px;"><input type="checkbox" value="01" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア辺境/deep2.png" width="150" height="150" style="position:absolute;top:000px;left:740px;"><input type="checkbox" value="02" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア辺境/deep3.png" width="150" height="150" style="position:absolute;top:153px;left:587px;"><input type="checkbox" value="03" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア辺境/deep4.png" width="150" height="150" style="position:absolute;top:153px;left:740px;"><input type="checkbox" value="04" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア辺境/deep5.png" width="150" height="150" style="position:absolute;top:306px;left:587px;"><input type="checkbox" value="05" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア辺境/deep6.png" width="150" height="150" style="position:absolute;top:306px;left:740px;"><input type="checkbox" value="06" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア辺境/deep7.png" width="150" height="150" style="position:absolute;top:459px;left:587px;"><input type="checkbox" value="07" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア辺境/deep8.png" width="150" height="150" style="position:absolute;top:459px;left:740px;"><input type="checkbox" value="08" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア辺境/deep9.png" width="150" height="150" style="position:absolute;top:000px;left:893px;"><input type="checkbox" value="09" data-pos="110,191"></label></li> -->
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>	
+		
+		<section><!--紅蓮ギラバニア山岳-->
+			<form id="deep2"><!--紅蓮-->
+				<ul id="mob">
+					<!-- <li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア山岳/deep1.png" width="150" height="150" style="position:absolute;top:000px;left:587px;"><input type="checkbox" value="01" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア山岳/deep2.png" width="150" height="150" style="position:absolute;top:000px;left:740px;"><input type="checkbox" value="02" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア山岳/deep3.png" width="150" height="150" style="position:absolute;top:153px;left:587px;"><input type="checkbox" value="03" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア山岳/deep4.png" width="150" height="150" style="position:absolute;top:153px;left:740px;"><input type="checkbox" value="04" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア山岳/deep5.png" width="150" height="150" style="position:absolute;top:306px;left:587px;"><input type="checkbox" value="05" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア山岳/deep6.png" width="150" height="150" style="position:absolute;top:306px;left:740px;"><input type="checkbox" value="06" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア山岳/deep7.png" width="150" height="150" style="position:absolute;top:459px;left:587px;"><input type="checkbox" value="07" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア山岳/deep8.png" width="150" height="150" style="position:absolute;top:459px;left:740px;"><input type="checkbox" value="08" data-pos="110,191"></label></li> -->
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>	
+		
+		<section><!--紅蓮ギラバニア湖畔-->
+			<form id="deep3"><!--紅蓮-->
+				<ul id="mob">
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア湖畔/deep1.png" width="150" height="150" style="position:absolute;top:000px;left:587px;"><input type="checkbox" value="01" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア湖畔/deep2.png" width="150" height="150" style="position:absolute;top:000px;left:740px;"><input type="checkbox" value="02" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア湖畔/deep3.png" width="150" height="150" style="position:absolute;top:153px;left:587px;"><input type="checkbox" value="03" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ギラバニア湖畔/deep4.png" width="150" height="150" style="position:absolute;top:153px;left:740px;"><input type="checkbox" value="04" data-pos="110,191"></label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>	
+
+		<section><!--紅蓮紅玉海-->
+			<form id="deep4"><!--紅蓮-->
+				<ul id="mob">
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/紅玉海/deep1.png" width="150" height="150" style="position:absolute;top:000px;left:587px;"><input type="checkbox" value="01" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/紅玉海/deep2.png" width="150" height="150" style="position:absolute;top:000px;left:740px;"><input type="checkbox" value="02" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/紅玉海/deep3.png" width="150" height="150" style="position:absolute;top:153px;left:587px;"><input type="checkbox" value="03" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/紅玉海/deep4.png" width="150" height="150" style="position:absolute;top:153px;left:740px;"><input type="checkbox" value="04" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/紅玉海/deep5.png" width="150" height="150" style="position:absolute;top:306px;left:587px;"><input type="checkbox" value="05" data-pos="110,191"></label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>	
+
+		<section><!--紅蓮ヤンサ-->
+			<form id="deep5"><!--紅蓮-->
+				<ul id="mob">
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ヤンサ/deep1.png" width="150" height="150" style="position:absolute;top:000px;left:587px;"><input type="checkbox" value="01" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ヤンサ/deep2.png" width="150" height="150" style="position:absolute;top:000px;left:740px;"><input type="checkbox" value="02" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ヤンサ/deep3.png" width="150" height="150" style="position:absolute;top:153px;left:587px;"><input type="checkbox" value="03" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/ヤンサ/deep4.png" width="150" height="150" style="position:absolute;top:153px;left:740px;"><input type="checkbox" value="04" data-pos="110,191"></label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>	
+		
+		<section><!--紅蓮アジムステップ-->
+			<form id="deep6"><!--紅蓮-->
+				<ul id="mob">
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/アジムステップ/deep1.png" width="150" height="150" style="position:absolute;top:000px;left:587px;"><input type="checkbox" value="01" data-pos="110,191"></label></li>
+					<li><label><img src="モブハントがめんどくさい人用マップ/images/map/g10/アジムステップ/deep2.png" width="150" height="150" style="position:absolute;top:000px;left:740px;"><input type="checkbox" value="02" data-pos="110,191"></label></li>
+				</ul>
+				<input type="reset" value="このエリアをリセット">
+			</form>
+		</section>
+
 
 		<section><!--漆黒イルメグ-->
 			<form id="chizu13"><!--漆黒-->
